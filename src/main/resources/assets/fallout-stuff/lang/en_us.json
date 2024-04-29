@@ -1,9 +1,11 @@
 {
-    "itemgroup.fallout_stuff": "Fallout Stuff",
-    
     "item.fallout-stuff.cap": "Bottle Cap",
     "item.fallout-stuff.stimpak": "Stimpak",
     "item.fallout-stuff.snack_cakes": "Fancy Lads Snack Cakes",
+    "item.fallout-stuff.nuka_cola": "Nuka Cola",
+    "item.fallout-stuff.nuka_cola_bottle": "Nuka Cola Bottle",
 
-    "block.fallout-stuff.vault_light": "Vault Light"
+    "block.fallout-stuff.vault_light": "Vault Light",
+
+    "itemgroup.fallout_stuff": "Fallout Stuff"
 }

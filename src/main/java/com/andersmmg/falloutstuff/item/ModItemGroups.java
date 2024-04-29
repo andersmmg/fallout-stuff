@@ -15,10 +15,12 @@ public class ModItemGroups {
     public static final ItemGroup FALLOUT_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(FalloutStuff.MOD_ID, "fallout_stuff"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.fallout_stuff"))
-                    .icon(() -> new ItemStack(ModItems.CAP_ITEM)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.CAP_ITEM);
-                        entries.add(ModItems.SNACK_CAKES_ITEM);
-                        entries.add(ModItems.STIMPAK_ITEM);
+                    .icon(() -> new ItemStack(ModItems.CAP)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.CAP);
+                        entries.add(ModItems.SNACK_CAKES);
+                        entries.add(ModItems.STIMPAK);
+                        entries.add(ModItems.NUKA_COLA);
+                        entries.add(ModItems.NUKA_COLA_BOTTLE);
 
                         entries.add(ModBlocks.VAULT_LIGHT_BLOCK);
                     }).build());
