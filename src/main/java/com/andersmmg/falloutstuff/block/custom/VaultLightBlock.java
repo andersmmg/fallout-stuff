@@ -1,5 +1,6 @@
 package com.andersmmg.falloutstuff.block.custom;
 
+import net.minecraft.util.function.BooleanBiFunction;
 import org.jetbrains.annotations.Nullable;
 
 import com.andersmmg.falloutstuff.util.VoxelUtils;
@@ -120,12 +121,12 @@ public class VaultLightBlock extends FacingBlock {
         return state.get(FACING);
     }
 
-    private static final VoxelShape VAULT_LIGHT = VoxelShapes.union(createCuboidShape(5, 5, 14, 11, 11, 16));
+    private static final VoxelShape VAULT_LIGHT = VoxelShapes.combineAndSimplify(Block.createCuboidShape(4, 4, 15, 12, 12, 16), Block.createCuboidShape(5, 5, 14, 11, 11, 15), BooleanBiFunction.OR);
     private static final VoxelShape VAULT_LIGHT_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VAULT_LIGHT);
     private static final VoxelShape VAULT_LIGHT_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VAULT_LIGHT);
     private static final VoxelShape VAULT_LIGHT_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_UP = VoxelShapes.union(createCuboidShape(5, 0, 5, 11, 2, 11));
-    private static final VoxelShape VAULT_LIGHT_DOWN = VoxelShapes.union(createCuboidShape(5, 14, 5, 11, 16, 11));
+    private static final VoxelShape VAULT_LIGHT_UP = VoxelShapes.union(createCuboidShape(5, 1, 5, 11, 2, 11));
+    private static final VoxelShape VAULT_LIGHT_DOWN = VoxelShapes.union(createCuboidShape(4.0, 15.0, 4.0, 12.0, 16.0, 12.0));
     
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

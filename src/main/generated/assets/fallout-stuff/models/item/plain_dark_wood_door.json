@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "fallout-stuff:item/cap"
+    "layer0": "fallout-stuff:item/plain_dark_wood_door"
   }
 }

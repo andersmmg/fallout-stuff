@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fallout-stuff:block/danger_stripes"
+  }
+}

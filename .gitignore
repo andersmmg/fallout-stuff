@@ -42,4 +42,4 @@ replay_*.log
 # other
 
 .directory
-src/main/generated/.cache
+src/main/generated/.cache/

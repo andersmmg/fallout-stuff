@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "fallout-stuff:block/red_button"
+  }
+}

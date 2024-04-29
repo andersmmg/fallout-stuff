@@ -23,6 +23,13 @@ public class ModItemGroups {
                         entries.add(ModItems.NUKA_COLA_BOTTLE);
 
                         entries.add(ModBlocks.VAULT_LIGHT_BLOCK);
+                        entries.add(ModBlocks.VAULT_CRATE_BLOCK);
+                        entries.add(ModBlocks.BOX_BLOCK);
+                        entries.add(ModBlocks.DANGER_IRON_BLOCK);
+                        entries.add(ModBlocks.DANGER_STRIPES_BLOCK);
+                        entries.add(ModBlocks.RED_BUTTON);
+                        entries.add(ModBlocks.PLAIN_DARK_WOOD_DOOR);
+                        entries.add(ModBlocks.FILE_CABINET_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {
