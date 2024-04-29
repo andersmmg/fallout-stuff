@@ -21,11 +21,7 @@ public class StimpakItem extends Item {
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         
         if (user.getHealth() < user.getMaxHealth()) {
-            if (user.getHealth() + 5 < user.getMaxHealth()) {
-                user.setHealth(user.getHealth() + 5);
-            } else {
-                user.setHealth(user.getMaxHealth());
-            }
+            user.heal(5);
             if (!user.getAbilities().creativeMode) {
                 itemStack.decrement(1);
             }

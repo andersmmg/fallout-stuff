@@ -6,13 +6,27 @@
 	},
 	"elements": [
 		{
+			"name": "box",
 			"from": [1, 0, 1],
+			"to": [15, 9, 15],
+			"faces": {
+				"north": {"uv": [3.5, 0.25, 7, 2.5], "texture": "#0"},
+				"east": {"uv": [3.5, 2.75, 7, 5], "texture": "#0"},
+				"south": {"uv": [3.5, 5.25, 7, 7.5], "texture": "#0"},
+				"west": {"uv": [0, 7.25, 3.5, 9.5], "texture": "#0"},
+				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "lid",
+			"from": [1, 9, 1],
 			"to": [15, 10, 15],
 			"faces": {
-				"north": {"uv": [3.5, 0, 7, 2.5], "texture": "#0"},
-				"east": {"uv": [3.5, 2.5, 7, 5], "texture": "#0"},
-				"south": {"uv": [3.5, 5, 7, 7.5], "texture": "#0"},
-				"west": {"uv": [0, 7, 3.5, 9.5], "texture": "#0"},
+				"north": {"uv": [3.5, 0, 7, 0.25], "texture": "#0"},
+				"east": {"uv": [3.5, 2.5, 7, 2.75], "texture": "#0"},
+				"south": {"uv": [3.5, 5, 7, 5.25], "texture": "#0"},
+				"west": {"uv": [0, 7, 3.5, 7.25], "texture": "#0"},
 				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
 				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
 			}
@@ -54,7 +68,7 @@
 			"name": "VoxelShapes",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"children": [0]
+			"children": [0, 1]
 		}
 	]
 }
