@@ -1,0 +1,6 @@
+{
+    "parent": "fallout-stuff:block/vault_light",
+    "textures": {
+        "0": "fallout-stuff:block/vault_light_on"
+    }
+}

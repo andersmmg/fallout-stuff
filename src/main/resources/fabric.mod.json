@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "fallout-stuff",
+	"version": "${version}",
+	"name": "Fallout Stuff",
+	"description": "An assortment of stuff from the Fallout series.",
+	"authors": [
+		"Andersmmg"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/fallout-stuff/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.andersmmg.falloutstuff.FalloutStuff"
+		],
+		"client": [
+			"com.andersmmg.falloutstuff.FalloutStuffClient"
+		],
+		"fabric-datagen": [
+			"com.andersmmg.falloutstuff.FalloutStuffDataGenerator"
+		]
+	},
+	"mixins": [
+		"fallout-stuff.mixins.json",
+		{
+			"config": "fallout-stuff.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
