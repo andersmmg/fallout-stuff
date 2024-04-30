@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "0": "fallout-stuff:block/vault_poster_4",
+    "particle": "fallout-stuff:block/vault_poster_4"
+  },
+  "parent": "fallout-stuff:block/vault_poster"
+}

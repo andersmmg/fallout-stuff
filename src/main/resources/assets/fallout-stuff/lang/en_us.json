@@ -14,5 +14,12 @@
     "block.fallout-stuff.plain_dark_wood_door": "Plain Dark Wood Door",
     "block.fallout-stuff.file_cabinet": "File Cabinet",
 
+    "block.fallout-stuff.vault_poster_1": "Vault Poster 1",
+    "block.fallout-stuff.vault_poster_2": "Vault Poster 2",
+    "block.fallout-stuff.vault_poster_3": "Vault Poster 3",
+    "block.fallout-stuff.vault_poster_4": "Vault Poster 4",
+
+    "sounds.fallout-stuff.stimpak_use": "Stimpak Used",
+
     "itemgroup.fallout_stuff": "Fallout Stuff"
 }

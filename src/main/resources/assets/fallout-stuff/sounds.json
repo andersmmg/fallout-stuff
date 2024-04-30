@@ -1,0 +1,8 @@
+{
+  "stimpak_use": {
+    "subtitle": "sounds.fallout-stuff.stimpak_use",
+    "sounds": [
+      "fallout-stuff:stimpak_use"
+    ]
+  }
+}

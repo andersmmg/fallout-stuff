@@ -30,6 +30,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_BUTTON);
                         entries.add(ModBlocks.PLAIN_DARK_WOOD_DOOR);
                         entries.add(ModBlocks.FILE_CABINET_BLOCK);
+
+                        entries.add(ModBlocks.VAULT_POSTER_BLOCK_1);
+                        entries.add(ModBlocks.VAULT_POSTER_BLOCK_2);
+                        entries.add(ModBlocks.VAULT_POSTER_BLOCK_3);
+                        entries.add(ModBlocks.VAULT_POSTER_BLOCK_4);
                     }).build());
 
     public static void registerItemGroups() {

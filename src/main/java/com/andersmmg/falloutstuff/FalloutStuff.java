@@ -2,6 +2,7 @@ package com.andersmmg.falloutstuff;
 
 import com.andersmmg.falloutstuff.block.entity.ModBlockEntities;
 import com.andersmmg.falloutstuff.screen.ModScreenHandlers;
+import com.andersmmg.falloutstuff.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -29,5 +30,6 @@ public class FalloutStuff implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
+		ModSounds.registerSounds();
 	}
 }

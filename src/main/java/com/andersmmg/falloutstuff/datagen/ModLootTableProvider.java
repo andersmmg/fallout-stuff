@@ -18,6 +18,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
          addDrop(ModBlocks.BOX_BLOCK);
          addDrop(ModBlocks.RED_BUTTON);
          addDrop(ModBlocks.PLAIN_DARK_WOOD_DOOR, doorDrops(ModBlocks.PLAIN_DARK_WOOD_DOOR));
+
+         addDrop(ModBlocks.VAULT_POSTER_BLOCK_1);
+         addDrop(ModBlocks.VAULT_POSTER_BLOCK_2);
+         addDrop(ModBlocks.VAULT_POSTER_BLOCK_3);
+         addDrop(ModBlocks.VAULT_POSTER_BLOCK_4);
     }
 
 }

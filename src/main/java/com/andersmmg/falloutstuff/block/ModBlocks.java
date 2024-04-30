@@ -1,10 +1,7 @@
 package com.andersmmg.falloutstuff.block;
 
 import com.andersmmg.falloutstuff.FalloutStuff;
-import com.andersmmg.falloutstuff.block.custom.BoxBlock;
-import com.andersmmg.falloutstuff.block.custom.FileCabinetBlock;
-import com.andersmmg.falloutstuff.block.custom.VaultCrateBlock;
-import com.andersmmg.falloutstuff.block.custom.VaultLightBlock;
+import com.andersmmg.falloutstuff.block.custom.*;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -35,6 +32,15 @@ public class ModBlocks {
             new ButtonBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_BUTTON), BlockSetType.IRON, 10, false));
     public static final Block PLAIN_DARK_WOOD_DOOR = registerBlock("plain_dark_wood_door",
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_DOOR), BlockSetType.DARK_OAK));
+
+    public static final Block VAULT_POSTER_BLOCK_1 = registerBlock("vault_poster_1",
+            new VaultPosterBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).nonOpaque()));
+    public static final Block VAULT_POSTER_BLOCK_2 = registerBlock("vault_poster_2",
+            new VaultPosterBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).nonOpaque()));
+    public static final Block VAULT_POSTER_BLOCK_3 = registerBlock("vault_poster_3",
+            new VaultPosterBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).nonOpaque()));
+    public static final Block VAULT_POSTER_BLOCK_4 = registerBlock("vault_poster_4",
+            new VaultPosterBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
