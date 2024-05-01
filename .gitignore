@@ -43,3 +43,5 @@ replay_*.log
 
 .directory
 /src/main/generated/.cache/
+*autosave.kra
+*.png~
