@@ -10,6 +10,9 @@ public class ModSounds {
     public static final SoundEvent STIMPAK_USE = registerSoundEvent("stimpak_use");
     public static final SoundEvent FILECABINET_OPEN = registerSoundEvent("filecabinet_open");
     public static final SoundEvent FILECABINET_CLOSE = registerSoundEvent("filecabinet_close");
+    public static final SoundEvent BOX_OPEN = registerSoundEvent("box_open");
+    public static final SoundEvent BOX_CLOSE = registerSoundEvent("box_close");
+
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(FalloutStuff.MOD_ID, name);

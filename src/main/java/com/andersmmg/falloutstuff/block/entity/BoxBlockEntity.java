@@ -2,6 +2,7 @@ package com.andersmmg.falloutstuff.block.entity;
 
 import com.andersmmg.falloutstuff.block.custom.FileCabinetBlock;
 import com.andersmmg.falloutstuff.block.custom.VaultCrateBlock;
+import com.andersmmg.falloutstuff.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
@@ -29,13 +30,13 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
 
         @Override
         protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
-            BoxBlockEntity.this.playSound(state, SoundEvents.BLOCK_CHEST_OPEN);
+            BoxBlockEntity.this.playSound(state, ModSounds.BOX_OPEN);
             BoxBlockEntity.this.setOpen(state, true);
         }
 
         @Override
         protected void onContainerClose(World world, BlockPos pos, BlockState state) {
-            BoxBlockEntity.this.playSound(state, SoundEvents.BLOCK_CHEST_CLOSE);
+            BoxBlockEntity.this.playSound(state, ModSounds.BOX_CLOSE);
             BoxBlockEntity.this.setOpen(state, false);
         }
 

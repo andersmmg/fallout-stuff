@@ -27,6 +27,8 @@
     "sounds.fallout-stuff.stimpak_use": "Stimpak Used",
     "sounds.fallout-stuff.filecabinet_close": "File Cabinet Closed",
     "sounds.fallout-stuff.filecabinet_open": "File Cabinet Opened",
+    "sounds.fallout-stuff.box_open": "Cardboard Box Opened",
+    "sounds.fallout-stuff.box_close": "Cardboard Box Closed",
 
     "itemgroup.fallout_stuff": "Fallout Stuff"
 }

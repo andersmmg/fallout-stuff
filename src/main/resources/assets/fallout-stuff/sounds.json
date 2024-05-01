@@ -16,5 +16,17 @@
     "sounds": [
       "fallout-stuff:filecabinet_close"
     ]
+  },
+  "box_open": {
+    "subtitle": "sounds.fallout-stuff.box_open",
+    "sounds": [
+      "fallout-stuff:box_open"
+    ]
+  },
+  "box_close": {
+    "subtitle": "sounds.fallout-stuff.box_close",
+    "sounds": [
+      "fallout-stuff:box_close"
+    ]
   }
 }

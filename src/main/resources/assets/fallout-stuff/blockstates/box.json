@@ -17,18 +17,18 @@
     },
 
     "facing=east,open=true": {
-      "model": "fallout-stuff:block/box",
+      "model": "fallout-stuff:block/box_open",
       "y": 90
     },
     "facing=north,open=true": {
-      "model": "fallout-stuff:block/box"
+      "model": "fallout-stuff:block/box_open"
     },
     "facing=south,open=true": {
-      "model": "fallout-stuff:block/box",
+      "model": "fallout-stuff:block/box_open",
       "y": 180
     },
     "facing=west,open=true": {
-      "model": "fallout-stuff:block/box",
+      "model": "fallout-stuff:block/box_open",
       "y": 270
     }
   }
