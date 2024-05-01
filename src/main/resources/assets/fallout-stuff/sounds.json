@@ -4,5 +4,17 @@
     "sounds": [
       "fallout-stuff:stimpak_use"
     ]
+  },
+  "filecabinet_open": {
+    "subtitle": "sounds.fallout-stuff.filecabinet_open",
+    "sounds": [
+      "fallout-stuff:filecabinet_open"
+    ]
+  },
+  "filecabinet_close": {
+    "subtitle": "sounds.fallout-stuff.filecabinet_close",
+    "sounds": [
+      "fallout-stuff:filecabinet_close"
+    ]
   }
 }

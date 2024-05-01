@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "fallout-stuff:block/mr_pebbles_poster",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "fallout-stuff:block/mr_pebbles_poster"
+    },
+    "facing=south": {
+      "model": "fallout-stuff:block/mr_pebbles_poster",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fallout-stuff:block/mr_pebbles_poster",
+      "y": 270
+    }
+  }
+}
+

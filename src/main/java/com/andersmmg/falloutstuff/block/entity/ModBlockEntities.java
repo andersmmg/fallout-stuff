@@ -20,7 +20,7 @@ public class ModBlockEntities {
     public static final BlockEntityType<FileCabinetBlockEntity> FILE_CABINET_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "file_cabinet_be"),
                     FabricBlockEntityTypeBuilder.create(FileCabinetBlockEntity::new,
-                            ModBlocks.FILE_CABINET_BLOCK).build());
+                            ModBlocks.FILE_CABINET_BLOCK, ModBlocks.FILE_CABINET_DARK_BLOCK).build());
 
     public static void registerBlockEntities() {
         FalloutStuff.LOGGER.info("Registering Block Entities for " + FalloutStuff.MOD_ID);

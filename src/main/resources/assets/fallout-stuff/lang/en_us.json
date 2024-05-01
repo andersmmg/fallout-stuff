@@ -12,14 +12,21 @@
     "block.fallout-stuff.danger_iron": "Danger Iron Block",
     "block.fallout-stuff.red_button": "Red Button",
     "block.fallout-stuff.plain_dark_wood_door": "Plain Dark Wood Door",
-    "block.fallout-stuff.file_cabinet": "File Cabinet",
+    "block.fallout-stuff.file_cabinet": "File Cabinet White",
+    "block.fallout-stuff.file_cabinet_dark": "File Cabinet Black",
 
     "block.fallout-stuff.vault_poster_1": "Vault Poster 1",
     "block.fallout-stuff.vault_poster_2": "Vault Poster 2",
     "block.fallout-stuff.vault_poster_3": "Vault Poster 3",
     "block.fallout-stuff.vault_poster_4": "Vault Poster 4",
+    "block.fallout-stuff.vault_poster_5": "Vault Poster 5",
+    "block.fallout-stuff.mr_pebbles_poster": "Mr. Pebbles Poster",
+    "block.fallout-stuff.nuka_girl_poster": "Nuka Girl Poster",
+    "block.fallout-stuff.vault_boy_statue": "Vault Boy Statue",
 
     "sounds.fallout-stuff.stimpak_use": "Stimpak Used",
+    "sounds.fallout-stuff.filecabinet_close": "File Cabinet Closed",
+    "sounds.fallout-stuff.filecabinet_open": "File Cabinet Opened",
 
     "itemgroup.fallout_stuff": "Fallout Stuff"
 }

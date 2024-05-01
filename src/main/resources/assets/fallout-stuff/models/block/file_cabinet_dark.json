@@ -1,0 +1,9 @@
+{
+	"textures": {
+		"0": "fallout-stuff:block/filecabinet_dark_front",
+		"1": "fallout-stuff:block/filecabinet_dark_top",
+		"2": "fallout-stuff:block/filecabinet_dark_side",
+		"particle": "fallout-stuff:block/filecabinet_dark_front"
+	},
+	"parent": "fallout-stuff:block/file_cabinet"
+}

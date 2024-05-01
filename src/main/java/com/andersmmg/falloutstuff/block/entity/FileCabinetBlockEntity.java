@@ -1,6 +1,7 @@
 package com.andersmmg.falloutstuff.block.entity;
 
 import com.andersmmg.falloutstuff.block.custom.FileCabinetBlock;
+import com.andersmmg.falloutstuff.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
@@ -28,13 +29,13 @@ public class FileCabinetBlockEntity extends LootableContainerBlockEntity {
 
         @Override
         protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
-            FileCabinetBlockEntity.this.playSound(state, SoundEvents.BLOCK_BARREL_OPEN);
+            FileCabinetBlockEntity.this.playSound(state, ModSounds.FILECABINET_OPEN);
             FileCabinetBlockEntity.this.setOpen(state, true);
         }
 
         @Override
         protected void onContainerClose(World world, BlockPos pos, BlockState state) {
-            FileCabinetBlockEntity.this.playSound(state, SoundEvents.BLOCK_BARREL_CLOSE);
+            FileCabinetBlockEntity.this.playSound(state, ModSounds.FILECABINET_CLOSE);
             FileCabinetBlockEntity.this.setOpen(state, false);
         }
 

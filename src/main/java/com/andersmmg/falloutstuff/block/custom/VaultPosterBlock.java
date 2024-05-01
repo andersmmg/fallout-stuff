@@ -70,7 +70,6 @@ public class VaultPosterBlock extends FacingBlock{
         return state.get(FACING);
     }
 
-//    private static final VoxelShape POSTER_SHAPE = Block.createCuboidShape(0, 0, 15.5, 16, 16, 16);
     private static final VoxelShape POSTER_SHAPE = Block.createCuboidShape(0, -2, 15.9, 16, 19, 16);
     private static final VoxelShape POSTER_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, POSTER_SHAPE);
     private static final VoxelShape POSTER_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, POSTER_SHAPE);

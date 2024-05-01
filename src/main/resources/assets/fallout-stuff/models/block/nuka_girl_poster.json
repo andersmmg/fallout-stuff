@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "0": "fallout-stuff:block/nuka_girl_poster",
+    "particle": "fallout-stuff:block/nuka_girl_poster"
+  },
+  "parent": "fallout-stuff:block/vault_poster"
+}

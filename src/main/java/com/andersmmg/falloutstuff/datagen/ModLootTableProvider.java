@@ -14,8 +14,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
          addDrop(ModBlocks.DANGER_IRON_BLOCK);
          addDrop(ModBlocks.DANGER_STRIPES_BLOCK);
          addDrop(ModBlocks.VAULT_LIGHT_BLOCK);
+         
          addDrop(ModBlocks.VAULT_CRATE_BLOCK);
          addDrop(ModBlocks.BOX_BLOCK);
+         addDrop(ModBlocks.FILE_CABINET_BLOCK);
+         addDrop(ModBlocks.FILE_CABINET_DARK_BLOCK);
+
          addDrop(ModBlocks.RED_BUTTON);
          addDrop(ModBlocks.PLAIN_DARK_WOOD_DOOR, doorDrops(ModBlocks.PLAIN_DARK_WOOD_DOOR));
 
@@ -23,6 +27,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
          addDrop(ModBlocks.VAULT_POSTER_BLOCK_2);
          addDrop(ModBlocks.VAULT_POSTER_BLOCK_3);
          addDrop(ModBlocks.VAULT_POSTER_BLOCK_4);
+         addDrop(ModBlocks.VAULT_POSTER_BLOCK_5);
+         addDrop(ModBlocks.MR_PEBBLES_POSTER_BLOCK);
+         addDrop(ModBlocks.NUKA_GIRL_POSTER_BLOCK);
+         addDrop(ModBlocks.VAULT_BOY_STATUE);
     }
 
 }

@@ -1,13 +1,13 @@
 package com.andersmmg.falloutstuff;
 
-import com.andersmmg.falloutstuff.screen.ModScreenHandlers;
-import com.andersmmg.falloutstuff.screen.PositionedScreen;
+import com.andersmmg.falloutstuff.block.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
-import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.render.RenderLayer;
 
 public class FalloutStuffClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-//		HandledScreens.register(ModScreenHandlers.BOX_SCREEN_HANDLER, PositionedScreen::new);
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VAULT_BOY_STATUE, RenderLayer.getCutout());
 	}
 }
