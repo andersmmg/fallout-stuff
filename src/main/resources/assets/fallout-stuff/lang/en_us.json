@@ -7,7 +7,8 @@
 
     "block.fallout-stuff.vault_light": "Vault Light",
     "block.fallout-stuff.vault_crate": "Vault-Tec Crate",
-    "block.fallout-stuff.box": "Box",
+    "block.fallout-stuff.box": "Cardboard Box",
+    "container.box.more": "and %s more...",
     "block.fallout-stuff.danger_stripes": "Danger Stripes Block",
     "block.fallout-stuff.danger_iron": "Danger Iron Block",
     "block.fallout-stuff.red_button": "Red Button",

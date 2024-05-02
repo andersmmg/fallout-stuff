@@ -6,6 +6,7 @@ import com.andersmmg.falloutstuff.block.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -17,8 +18,8 @@ public class ModBlocks {
     public static final Block VAULT_LIGHT_BLOCK = registerBlock("vault_light",
             new VaultLightBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
 
-    public static final Block BOX_BLOCK = registerBlock("box",
-            new BoxBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).nonOpaque()));
+    public static final Block BOX_BLOCK = registerBlockOnly("box",
+            new BoxBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).strength(0.8f).sounds(BlockSoundGroup.WOOL).nonOpaque()));
     public static final Block VAULT_CRATE_BLOCK = registerBlock("vault_crate",
             new VaultCrateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block FILE_CABINET_BLOCK = registerBlock("file_cabinet",
@@ -57,6 +58,10 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(FalloutStuff.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockOnly(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(FalloutStuff.MOD_ID, name), block);
     }
 

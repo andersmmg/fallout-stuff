@@ -1,22 +1,38 @@
 package com.andersmmg.falloutstuff.block.custom;
 
+import com.andersmmg.falloutstuff.block.ModBlocks;
 import com.andersmmg.falloutstuff.block.entity.BoxBlockEntity;
+import com.andersmmg.falloutstuff.block.entity.ModBlockEntities;
+import com.andersmmg.falloutstuff.item.ModItems;
 import com.andersmmg.falloutstuff.util.VoxelUtils;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.ShulkerBoxBlockEntity;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.context.LootContextParameterSet;
+import net.minecraft.loot.context.LootContextParameters;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtElement;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.*;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -27,9 +43,12 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class BoxBlock extends BlockWithEntity {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
+    public static final Identifier CONTENTS_DYNAMIC_DROP_ID = new Identifier("contents");
 
     public BoxBlock(AbstractBlock.Settings settings) {
         super(settings);
@@ -55,9 +74,8 @@ public class BoxBlock extends BlockWithEntity {
             return;
         }
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof Inventory) {
-            ItemScatterer.spawn(world, pos, (Inventory)((Object)blockEntity));
-            world.updateComparators(pos, this);
+        if (blockEntity instanceof BoxBlockEntity) {
+            world.updateComparators(pos, state.getBlock());
         }
         super.onStateReplaced(state, world, pos, newState, moved);
     }
@@ -67,6 +85,79 @@ public class BoxBlock extends BlockWithEntity {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof BoxBlockEntity) {
             ((BoxBlockEntity)blockEntity).tick();
+        }
+    }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof BoxBlockEntity boxBlockEntity) {
+            if (!world.isClient && player.isCreative() && !boxBlockEntity.isEmpty()) {
+                ItemStack itemStack = BoxBlock.getItemStack();
+                blockEntity.setStackNbt(itemStack);
+                if (boxBlockEntity.hasCustomName()) {
+                    itemStack.setCustomName(boxBlockEntity.getCustomName());
+                }
+                ItemEntity itemEntity = new ItemEntity(world, (double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ() + 0.5, itemStack);
+                itemEntity.setToDefaultPickupDelay();
+                world.spawnEntity(itemEntity);
+            } else {
+                boxBlockEntity.checkLootInteraction(player);
+            }
+        }
+        super.onBreak(world, pos, state, player);
+    }
+
+    public static ItemStack getItemStack() {
+        return new ItemStack(ModBlocks.BOX_BLOCK);
+    }
+
+    @Override
+    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+        BlockEntity blockEntity = builder.getOptional(LootContextParameters.BLOCK_ENTITY);
+        if (blockEntity instanceof BoxBlockEntity boxBlockEntity) {
+            builder = builder.addDynamicDrop(CONTENTS_DYNAMIC_DROP_ID, lootConsumer -> {
+                for (int i = 0; i < boxBlockEntity.size(); ++i) {
+                    lootConsumer.accept(boxBlockEntity.getStack(i));
+                }
+            });
+        }
+        return super.getDroppedStacks(state, builder);
+    }
+
+    @Override
+    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+        ItemStack itemStack = super.getPickStack(world, pos, state);
+        world.getBlockEntity(pos, ModBlockEntities.BOX_ENTITY).ifPresent(blockEntity -> blockEntity.setStackNbt(itemStack));
+        return itemStack;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
+        super.appendTooltip(stack, world, tooltip, options);
+        NbtCompound nbtCompound = BlockItem.getBlockEntityNbt(stack);
+        if (nbtCompound != null) {
+            if (nbtCompound.contains("LootTable", NbtElement.STRING_TYPE)) {
+                tooltip.add(Text.literal("???????"));
+            }
+            if (nbtCompound.contains("Items", NbtElement.LIST_TYPE)) {
+                DefaultedList<ItemStack> defaultedList = DefaultedList.ofSize(27, ItemStack.EMPTY);
+                Inventories.readNbt(nbtCompound, defaultedList);
+                int i = 0;
+                int j = 0;
+                for (ItemStack itemStack : defaultedList) {
+                    if (itemStack.isEmpty()) continue;
+                    ++j;
+                    if (i > 4) continue;
+                    ++i;
+                    MutableText mutableText = itemStack.getName().copy();
+                    mutableText.append(" x").append(String.valueOf(itemStack.getCount()));
+                    tooltip.add(mutableText.formatted(Formatting.GRAY));
+                }
+                if (j - i > 0) {
+                    tooltip.add(Text.translatable("container.box.more", j - i).formatted(Formatting.ITALIC).formatted(Formatting.GRAY));
+                }
+            }
         }
     }
 

@@ -13,6 +13,7 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtElement;
 import net.minecraft.screen.GenericContainerScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.sound.SoundCategory;
@@ -26,7 +27,9 @@ import net.minecraft.world.World;
 
 public class BoxBlockEntity extends LootableContainerBlockEntity {
     private DefaultedList<ItemStack> items = DefaultedList.ofSize(size(), ItemStack.EMPTY);
-    private final ViewerCountManager stateManager = new ViewerCountManager(){
+    public static final String ITEMS_KEY = "Items";
+
+    private final ViewerCountManager stateManager = new ViewerCountManager() {
 
         @Override
         protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
@@ -47,7 +50,7 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
         @Override
         protected boolean isPlayerViewing(PlayerEntity player) {
             if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
-                Inventory inventory = ((GenericContainerScreenHandler)player.currentScreenHandler).getInventory();
+                Inventory inventory = ((GenericContainerScreenHandler) player.currentScreenHandler).getInventory();
                 return inventory == BoxBlockEntity.this;
             }
             return false;
@@ -73,17 +76,25 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
         return Text.translatable(getCachedState().getBlock().getTranslationKey());
     }
 
+    @Override
+    public void readNbt(NbtCompound nbt) {
+        super.readNbt(nbt);
+        this.readInventoryNbt(nbt);
+    }
 
     @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
-        Inventories.writeNbt(nbt, items);
+        if (!this.serializeLootTable(nbt)) {
+            Inventories.writeNbt(nbt, this.items, false);
+        }
     }
 
-    @Override
-    public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
-        Inventories.readNbt(nbt, items);
+    public void readInventoryNbt(NbtCompound nbt) {
+        this.items = DefaultedList.ofSize(this.size(), ItemStack.EMPTY);
+        if (!this.deserializeLootTable(nbt) && nbt.contains(ITEMS_KEY, NbtElement.LIST_TYPE)) {
+            Inventories.readNbt(nbt, this.items);
+        }
     }
 
     @Override
@@ -112,7 +123,7 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
     }
 
     void setOpen(BlockState state, boolean open) {
-        this.world.setBlockState(this.getPos(), (BlockState)state.with(FileCabinetBlock.OPEN, open), Block.NOTIFY_ALL);
+        this.world.setBlockState(this.getPos(), (BlockState) state.with(FileCabinetBlock.OPEN, open), Block.NOTIFY_ALL);
     }
 
     @Override
@@ -122,9 +133,9 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
 
     void playSound(BlockState state, SoundEvent soundEvent) {
         Vec3i vec3i = state.get(VaultCrateBlock.FACING).getVector();
-        double d = (double)this.pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
-        double e = (double)this.pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
-        double f = (double)this.pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;
+        double d = (double) this.pos.getX() + 0.5 + (double) vec3i.getX() / 2.0;
+        double e = (double) this.pos.getY() + 0.5 + (double) vec3i.getY() / 2.0;
+        double f = (double) this.pos.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;
         this.world.playSound(null, d, e, f, soundEvent, SoundCategory.BLOCKS, 0.5f, this.world.random.nextFloat() * 0.1f + 0.9f);
     }
 }
