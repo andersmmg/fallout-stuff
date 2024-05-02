@@ -4,12 +4,13 @@ import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.ModBlocks;
 import com.andersmmg.falloutstuff.item.custom.NukaColaItem;
 import com.andersmmg.falloutstuff.item.custom.StimpakItem;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
