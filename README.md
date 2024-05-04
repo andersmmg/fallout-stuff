@@ -17,6 +17,7 @@ everything you need.
 - **Bottle Caps:** Currency for trading and survival in the wasteland.
 - **Fancy Lads Cakes:** Satisfy your sweet tooth with this delicious treat from the Fallout universe.
 - **Posters:** Decorate with Fallout themed posters, like vault posters and Pebbles the cat.
+- **Lights:** Large and small redstone-powered lights for your vaults.
 
 ### Installation:
 
@@ -37,7 +38,6 @@ Fallout Stuff is compatible with Minecraft versions 1.20.x.
 ### Planned Possible Features:
 
 - **Vault Signs**
-- **Ceiling Lights**
 - **Sliding Doors**
 - **Alarm Block**
 
