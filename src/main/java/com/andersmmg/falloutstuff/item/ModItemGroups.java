@@ -2,7 +2,6 @@ package com.andersmmg.falloutstuff.item;
 
 import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.ModBlocks;
-
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -23,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NUKA_COLA_BOTTLE);
 
                         entries.add(ModBlocks.VAULT_LIGHT_BLOCK);
+                        entries.add(ModBlocks.VAULT_CEILING_LIGHT_BLOCK);
                         entries.add(ModBlocks.VAULT_CRATE_BLOCK);
                         entries.add(ModBlocks.BOX_BLOCK);
                         entries.add(ModBlocks.DANGER_IRON_BLOCK);

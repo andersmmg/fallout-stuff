@@ -19,13 +19,14 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-public class VaultLightBlock extends FacingBlock {
+public class LargeVaultLightBlock extends FacingBlock {
     public static final BooleanProperty LIT;
     public static final DirectionProperty FACING;
 
-    public VaultLightBlock(Settings settings) {
+    public LargeVaultLightBlock(Settings settings) {
         super(settings
                 .luminance((state) -> state.get(LIT) ? 15 : 0)
                 .emissiveLighting((state, world, pos) -> state.get(LIT)));
@@ -43,7 +44,7 @@ public class VaultLightBlock extends FacingBlock {
 
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos,
-            boolean notify) {
+                               boolean notify) {
         if (!world.isClient) {
             boolean lit = state.get(LIT);
 
@@ -86,6 +87,14 @@ public class VaultLightBlock extends FacingBlock {
         return state.rotate(mirror.getRotation((Direction) state.get(FACING)));
     }
 
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        Direction direction = state.get(FACING);
+        BlockPos blockPos = pos.offset(direction.getOpposite());
+        BlockState blockState = world.getBlockState(blockPos);
+        return blockState.isSideSolidFullSquare(world, blockPos, direction);
+    }
+
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -94,7 +103,7 @@ public class VaultLightBlock extends FacingBlock {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
-            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (direction.getOpposite() == state.get(FACING) && !state.canPlaceAt(world, pos)) {
             return Blocks.AIR.getDefaultState();
         }
@@ -105,13 +114,13 @@ public class VaultLightBlock extends FacingBlock {
         return state.get(FACING);
     }
 
-    private static final VoxelShape VAULT_LIGHT = VoxelShapes.combineAndSimplify(Block.createCuboidShape(4, 4, 15, 12, 12, 16), Block.createCuboidShape(5, 5, 14, 11, 11, 15), BooleanBiFunction.OR);
+    private static final VoxelShape VAULT_LIGHT = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 0, 15, 16, 16, 16), Block.createCuboidShape(2, 2, 14, 14, 14, 15), BooleanBiFunction.OR);
     private static final VoxelShape VAULT_LIGHT_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VAULT_LIGHT);
     private static final VoxelShape VAULT_LIGHT_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VAULT_LIGHT);
     private static final VoxelShape VAULT_LIGHT_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_UP = VoxelShapes.union(createCuboidShape(5, 1, 5, 11, 2, 11));
-    private static final VoxelShape VAULT_LIGHT_DOWN = VoxelShapes.union(createCuboidShape(4.0, 15.0, 4.0, 12.0, 16.0, 12.0));
-    
+    private static final VoxelShape VAULT_LIGHT_UP = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 0, 0, 16, 1, 16), Block.createCuboidShape(2, 1, 2, 14, 2, 14), BooleanBiFunction.OR);
+    private static final VoxelShape VAULT_LIGHT_DOWN = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 15, 0, 16, 16, 16), Block.createCuboidShape(2, 14, 2, 14, 15, 14), BooleanBiFunction.OR);
+
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);

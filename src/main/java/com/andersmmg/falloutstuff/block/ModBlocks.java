@@ -2,11 +2,9 @@ package com.andersmmg.falloutstuff.block;
 
 import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.custom.*;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -17,6 +15,8 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static final Block VAULT_LIGHT_BLOCK = registerBlock("vault_light",
             new VaultLightBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
+    public static final Block VAULT_CEILING_LIGHT_BLOCK = registerBlock("large_vault_light",
+            new LargeVaultLightBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
 
     public static final Block BOX_BLOCK = registerBlockOnly("box",
             new BoxBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).strength(0.8f).sounds(BlockSoundGroup.WOOL).nonOpaque()));

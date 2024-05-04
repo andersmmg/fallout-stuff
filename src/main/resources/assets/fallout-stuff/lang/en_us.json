@@ -4,8 +4,8 @@
     "item.fallout-stuff.snack_cakes": "Fancy Lads Snack Cakes",
     "item.fallout-stuff.nuka_cola": "Nuka Cola",
     "item.fallout-stuff.nuka_cola_bottle": "Nuka Cola Bottle",
-
-    "block.fallout-stuff.vault_light": "Vault Light",
+    "block.fallout-stuff.vault_light": "Small Vault Light",
+    "block.fallout-stuff.large_vault_light": "Large Vault Light",
     "block.fallout-stuff.vault_crate": "Vault-Tec Crate",
     "block.fallout-stuff.box": "Cardboard Box",
     "container.box.more": "and %s more...",
