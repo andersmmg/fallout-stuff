@@ -2,7 +2,11 @@
 
 ### Description:
 
-Immerse yourself in the post-apocalyptic world of Fallout within Minecraft with the Fallout Stuff mod! This Fabric mod brings a variety of iconic items from the Fallout universe into your Minecraft world, including Nuka Cola, stimpaks, bobbleheads, container blocks, bottle caps, Fancy Lads Cakes, and more. Whether you're enhancing your Fallout roleplay, adding unique elements to your builds, or simply enjoying the fun of Fallout-inspired items, Fallout Stuff has everything you need.
+Immerse yourself in the post-apocalyptic world of Fallout within Minecraft with the Fallout Stuff mod! This Fabric mod
+brings a variety of iconic items from the Fallout universe into your Minecraft world, including Nuka Cola, stimpaks,
+bobbleheads, container blocks, bottle caps, Fancy Lads Cakes, and more. Whether you're enhancing your Fallout roleplay,
+adding unique elements to your builds, or simply enjoying the fun of Fallout-inspired items, Fallout Stuff has
+everything you need.
 
 ### Features:
 
@@ -33,11 +37,16 @@ Fallout Stuff is compatible with Minecraft versions 1.20.x.
 ### Planned Possible Features:
 
 - **Vault Signs**
+- **Ceiling Lights**
+- **Sliding Doors**
+- **Alarm Block**
 
-Please note that these features are planned possibilities and not guaranteed. As a solo developer, I'll do my best to implement them, but development priorities may change.
+Please note that these features are planned possibilities and not guaranteed. As a solo developer, I'll do my best to
+implement them, but development priorities may change.
 
 ### Support:
 
-For any questions or support, you can reach out to us on [Modrinth](https://modrinth.com/mod/fallout-stuff) or [GitHub](https://github.com/andersmmg/fallout-stuff). Your feedback is highly valued!
+For any questions or support, you can reach out to us on [Modrinth](https://modrinth.com/mod/fallout-stuff)
+or [GitHub](https://github.com/andersmmg/fallout-stuff). Your feedback is highly valued!
 
 
