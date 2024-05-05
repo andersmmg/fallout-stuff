@@ -4,7 +4,8 @@
     64
   ],
   "textures": {
-    "1": "fallout-stuff:block/large_vault_light"
+    "1": "fallout-stuff:block/large_vault_light",
+    "particle": "fallout-stuff:block/large_vault_light"
   },
   "elements": [
     {

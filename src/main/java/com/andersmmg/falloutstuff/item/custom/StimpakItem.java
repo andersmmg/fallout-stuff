@@ -1,6 +1,8 @@
 package com.andersmmg.falloutstuff.item.custom;
 
+import com.andersmmg.falloutstuff.config.ModConfig;
 import com.andersmmg.falloutstuff.sound.ModSounds;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,11 +21,12 @@ public class StimpakItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
+        ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
 
         if (user.getHealth() < user.getMaxHealth()) {
-            user.heal(5);
+            user.heal(config.stimpakHealAmt);
             world.playSound(user, user.getBlockPos(), ModSounds.STIMPAK_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
             if (!user.getAbilities().creativeMode) {
