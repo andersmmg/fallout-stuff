@@ -1,5 +1,11 @@
 ## Fallout Stuff Mod
 
+[Modrinth](https://modrinth.com/mod/fallout-stuff)
+|
+[GitHub](https://github.com/andersmmg/fallout-stuff)
+|
+[Issues](https://github.com/andersmmg/fallout-stuff/issues)
+
 ### Description:
 
 Immerse yourself in the post-apocalyptic world of Fallout within Minecraft with the Fallout Stuff mod! This Fabric mod
@@ -26,9 +32,10 @@ everything you need.
 3. Place the mod JAR file into the 'mods' folder of your Minecraft directory.
 4. Launch Minecraft and embark on your Fallout-inspired adventure!
 
-### Compatibility:
+### Downloads
 
-Fallout Stuff is compatible with Minecraft versions 1.20.x.
+- [Modrinth](https://modrinth.com/mod/fallout-stuff/versions)
+- [Github](https://github.com/andersmmg/fallout-stuff/releases)
 
 ### Contributing and Feedback:
 
