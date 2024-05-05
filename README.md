@@ -47,6 +47,8 @@ everything you need.
 
 - **Vault Signs**
 - **Sliding Doors**
+- **Crafting Recipes**
+- **Power Armor**
 
 Please note that these features are planned possibilities and not guaranteed. As a solo developer, I'll do my best to
 implement them, but development priorities may change.
