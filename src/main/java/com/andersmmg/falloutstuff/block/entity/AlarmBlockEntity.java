@@ -1,6 +1,5 @@
 package com.andersmmg.falloutstuff.block.entity;
 
-import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.custom.AlarmBlock;
 import com.andersmmg.falloutstuff.sound.ModSounds;
 import net.minecraft.block.BlockState;
@@ -27,7 +26,6 @@ public class AlarmBlockEntity extends BlockEntity {
 
         if (isPowered && blockEntity.nextSoundTime != -1 && currentTime >= blockEntity.nextSoundTime) {
             blockEntity.playSound();
-            FalloutStuff.LOGGER.info("AlarmBlockEntity: Alarm triggered");
             blockEntity.scheduleNextSound(currentTime);
         } else if (isPowered && blockEntity.nextSoundTime == -1) {
             blockEntity.playSound();
