@@ -15,6 +15,7 @@
     "block.fallout-stuff.plain_dark_wood_door": "Plain Dark Wood Door",
     "block.fallout-stuff.file_cabinet": "File Cabinet White",
     "block.fallout-stuff.file_cabinet_dark": "File Cabinet Black",
+    "block.fallout-stuff.alarm_block": "Alarm Block",
 
     "block.fallout-stuff.vault_poster_1": "Vault Poster 1",
     "block.fallout-stuff.vault_poster_2": "Vault Poster 2",
@@ -30,6 +31,8 @@
     "sounds.fallout-stuff.filecabinet_open": "File Cabinet Opened",
     "sounds.fallout-stuff.box_open": "Cardboard Box Opened",
     "sounds.fallout-stuff.box_close": "Cardboard Box Closed",
+    "sounds.fallout-stuff.alarm": "Alarm Sounds",
+
     "text.autoconfig.fallout-stuff.title": "Fallout Stuff Configuration",
     "text.autoconfig.fallout-stuff.option.stimpakHealAmt": "Stimpak heal amount",
 

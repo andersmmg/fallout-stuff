@@ -23,7 +23,8 @@ everything you need.
 - **Bottle Caps:** Currency for trading and survival in the wasteland.
 - **Fancy Lads Cakes:** Satisfy your sweet tooth with this delicious treat from the Fallout universe.
 - **Posters:** Decorate with Fallout themed posters, like vault posters and Pebbles the cat.
-- **Lights:** Large and small redstone-powered lights for your vaults.
+- **Lights:** Large and small redstone-powered lights for your vaults lighting.
+- **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
 
 ### Installation:
 
@@ -46,7 +47,6 @@ everything you need.
 
 - **Vault Signs**
 - **Sliding Doors**
-- **Alarm Block**
 
 Please note that these features are planned possibilities and not guaranteed. As a solo developer, I'll do my best to
 implement them, but development priorities may change.

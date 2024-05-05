@@ -1,8 +1,8 @@
 package com.andersmmg.falloutstuff.block.entity;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.ModBlocks;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -21,6 +21,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "file_cabinet_be"),
                     FabricBlockEntityTypeBuilder.create(FileCabinetBlockEntity::new,
                             ModBlocks.FILE_CABINET_BLOCK, ModBlocks.FILE_CABINET_DARK_BLOCK).build());
+    public static final BlockEntityType<AlarmBlockEntity> ALARM_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "alarm_be"),
+                    FabricBlockEntityTypeBuilder.create(AlarmBlockEntity::new,
+                            ModBlocks.ALARM_BLOCK).build());
 
     public static void registerBlockEntities() {
         FalloutStuff.LOGGER.info("Registering Block Entities for " + FalloutStuff.MOD_ID);

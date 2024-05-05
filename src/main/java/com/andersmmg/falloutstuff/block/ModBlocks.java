@@ -32,6 +32,9 @@ public class ModBlocks {
     public static final Block DANGER_STRIPES_BLOCK = registerBlock("danger_stripes",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
+    public static final Block ALARM_BLOCK = registerBlock("alarm_block",
+            new AlarmBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+
     public static final Block RED_BUTTON = registerBlock("red_button",
             new ButtonBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_BUTTON), BlockSetType.IRON, 10, false));
     public static final Block PLAIN_DARK_WOOD_DOOR = registerBlock("plain_dark_wood_door",

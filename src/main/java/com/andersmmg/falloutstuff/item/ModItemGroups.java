@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BOX_BLOCK);
                         entries.add(ModBlocks.DANGER_IRON_BLOCK);
                         entries.add(ModBlocks.DANGER_STRIPES_BLOCK);
+                        entries.add(ModBlocks.ALARM_BLOCK);
                         entries.add(ModBlocks.RED_BUTTON);
                         entries.add(ModBlocks.PLAIN_DARK_WOOD_DOOR);
                         entries.add(ModBlocks.FILE_CABINET_BLOCK);

@@ -12,7 +12,7 @@ public class ModSounds {
     public static final SoundEvent FILECABINET_CLOSE = registerSoundEvent("filecabinet_close");
     public static final SoundEvent BOX_OPEN = registerSoundEvent("box_open");
     public static final SoundEvent BOX_CLOSE = registerSoundEvent("box_close");
-
+    public static final SoundEvent ALARM = registerSoundEvent("alarm");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(FalloutStuff.MOD_ID, name);

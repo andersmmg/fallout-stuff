@@ -28,5 +28,11 @@
     "sounds": [
       "fallout-stuff:box_close"
     ]
+  },
+  "alarm": {
+    "subtitle": "sounds.fallout-stuff.alarm",
+    "sounds": [
+      "fallout-stuff:alarm_1"
+    ]
   }
 }
