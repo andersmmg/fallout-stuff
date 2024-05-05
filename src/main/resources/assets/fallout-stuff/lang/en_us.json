@@ -30,7 +30,7 @@
     "sounds.fallout-stuff.filecabinet_open": "File Cabinet Opened",
     "sounds.fallout-stuff.box_open": "Cardboard Box Opened",
     "sounds.fallout-stuff.box_close": "Cardboard Box Closed",
-    "text.autoconfig.fallout-stuff.title": "Fallout Stuff Config",
+    "text.autoconfig.fallout-stuff.title": "Fallout Stuff Configuration",
     "text.autoconfig.fallout-stuff.option.stimpakHealAmt": "Stimpak heal amount",
 
     "itemgroup.fallout_stuff": "Fallout Stuff"

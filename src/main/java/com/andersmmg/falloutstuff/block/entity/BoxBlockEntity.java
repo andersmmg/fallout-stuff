@@ -1,7 +1,6 @@
 package com.andersmmg.falloutstuff.block.entity;
 
-import com.andersmmg.falloutstuff.block.custom.FileCabinetBlock;
-import com.andersmmg.falloutstuff.block.custom.VaultCrateBlock;
+import com.andersmmg.falloutstuff.block.custom.BoxBlock;
 import com.andersmmg.falloutstuff.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,7 +17,6 @@ import net.minecraft.screen.GenericContainerScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -123,7 +121,7 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
     }
 
     void setOpen(BlockState state, boolean open) {
-        this.world.setBlockState(this.getPos(), (BlockState) state.with(FileCabinetBlock.OPEN, open), Block.NOTIFY_ALL);
+        this.world.setBlockState(this.getPos(), (BlockState) state.with(BoxBlock.OPEN, open), Block.NOTIFY_ALL);
     }
 
     @Override
@@ -132,7 +130,7 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = state.get(VaultCrateBlock.FACING).getVector();
+        Vec3i vec3i = state.get(BoxBlock.FACING).getVector();
         double d = (double) this.pos.getX() + 0.5 + (double) vec3i.getX() / 2.0;
         double e = (double) this.pos.getY() + 0.5 + (double) vec3i.getY() / 2.0;
         double f = (double) this.pos.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;

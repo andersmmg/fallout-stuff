@@ -1,7 +1,5 @@
 package com.andersmmg.falloutstuff.block.entity;
 
-import com.andersmmg.falloutstuff.FalloutStuff;
-import com.andersmmg.falloutstuff.block.custom.FileCabinetBlock;
 import com.andersmmg.falloutstuff.block.custom.VaultCrateBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -112,7 +110,7 @@ public class VaultCrateBlockEntity extends LootableContainerBlockEntity {
     }
 
     void setOpen(BlockState state, boolean open) {
-        this.world.setBlockState(this.getPos(), (BlockState)state.with(FileCabinetBlock.OPEN, open), Block.NOTIFY_ALL);
+        this.world.setBlockState(this.getPos(), (BlockState) state.with(VaultCrateBlock.OPEN, open), Block.NOTIFY_ALL);
     }
 
     @Override
