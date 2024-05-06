@@ -113,8 +113,8 @@ modrinth {
     projectId = "1PPAAFX8" // This can be the project ID or the slug. Either will work!
     versionType = "release" // This is the default -- can also be `beta` or `alpha`
     uploadFile = remapJar // With Loom, this MUST be set to `remapJar` instead of `jar`!
-    gameVersions = ["1.20", "1.20.1", "1.20.2"] // Must be an array, even with only one version
-    loaders = ["fabric"] // Must also be an array - no need to specify this if you're using Loom or ForgeGradle
+//    gameVersions = ["1.20", "1.20.1", "1.20.2"] // Must be an array, even with only one version
+//    loaders = ["fabric"] // Must also be an array - no need to specify this if you're using Loom or ForgeGradle
     syncBodyFrom = rootProject.file("README.md").text
     tasks.modrinth.dependsOn(tasks.modrinthSyncBody)
     versionName = "${project.mod_version}+${project.minecraft_version} ${project.mod_name}"
@@ -125,19 +125,19 @@ modrinth {
 }
 
 githubRelease {
-    token GITHUB_TOKEN
-    owner "andersmmg"
-    draft false
+    token = GITHUB_TOKEN
+    owner = "andersmmg"
+    draft = false
     releaseName = "${mod_version}+${minecraft_version}"
-    body provider {
+    body = provider {
         """\
 ## CHANGELOG
 ${changelog().call()}
 """
     }
-    releaseAssets remapJar
-    allowUploadToExisting.set false
-    dryRun false
+    releaseAssets = remapJar
+    allowUploadToExisting = false
+    dryRun = false
 }
 
 task uploadRelease {
