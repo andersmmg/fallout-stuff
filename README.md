@@ -1,10 +1,11 @@
 ## Fallout Stuff Mod
 
-[Modrinth](https://modrinth.com/mod/fallout-stuff)
-|
-[GitHub](https://github.com/andersmmg/fallout-stuff)
-|
-[Issues](https://github.com/andersmmg/fallout-stuff/issues)
+[![Modrinth](https://img.shields.io/badge/Modrinth-1bd96a?style=for-the-badge&logo=modrinth&logoColor=white)
+](https://modrinth.com/mod/fallout-stuff)
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)
+](https://github.com/andersmmg/fallout-stuff)
+[![Issues](https://img.shields.io/github/issues-raw/andersmmg/fallout-stuff?style=for-the-badge&logo=github)
+](https://github.com/andersmmg/fallout-stuff/issues)
 
 ### Description:
 
