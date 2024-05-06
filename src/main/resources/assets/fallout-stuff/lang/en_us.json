@@ -32,9 +32,9 @@
     "sounds.fallout-stuff.box_open": "Cardboard Box Opened",
     "sounds.fallout-stuff.box_close": "Cardboard Box Closed",
     "sounds.fallout-stuff.alarm": "Alarm Sounds",
-
-    "text.autoconfig.fallout-stuff.title": "Fallout Stuff Configuration",
-    "text.autoconfig.fallout-stuff.option.stimpakHealAmt": "Stimpak heal amount",
+    "text.config.fallout-stuff.title": "Fallout Stuff Configuration",
+    "text.config.fallout-stuff.option.stimpakHealAmt": "Stimpak heal amount",
+    "text.config.fallout-stuff.option.alarmVolume": "Alarm volume",
 
     "itemgroup.fallout_stuff": "Fallout Stuff"
 }

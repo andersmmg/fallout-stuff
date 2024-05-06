@@ -1,5 +1,6 @@
 package com.andersmmg.falloutstuff.block.entity;
 
+import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.custom.AlarmBlock;
 import com.andersmmg.falloutstuff.sound.ModSounds;
 import net.minecraft.block.BlockState;
@@ -40,6 +41,6 @@ public class AlarmBlockEntity extends BlockEntity {
     }
 
     private void playSound() {
-        world.playSound(null, pos, ModSounds.ALARM, SoundCategory.BLOCKS, 1f, 1f);
+        world.playSound(null, pos, ModSounds.ALARM, SoundCategory.BLOCKS, FalloutStuff.CONFIG.alarmVolume(), 1f);
     }
 }
