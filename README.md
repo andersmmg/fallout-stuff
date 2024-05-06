@@ -26,12 +26,9 @@ everything you need.
 - **Lights:** Large and small redstone-powered lights for your vaults lighting.
 - **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
 
-### Installation:
+### Requirements:
 
-1. Download and install Fabric Loader.
-2. Download the Fallout Stuff mod.
-3. Place the mod JAR file into the 'mods' folder of your Minecraft directory.
-4. Launch Minecraft and embark on your Fallout-inspired adventure!
+- [oωo](https://modrinth.com/mod/owo-lib)
 
 ### Downloads
 
@@ -55,7 +52,7 @@ implement them, but development priorities may change.
 
 ### Support:
 
-For any questions or support, you can reach out to us on [Modrinth](https://modrinth.com/mod/fallout-stuff)
-or [GitHub](https://github.com/andersmmg/fallout-stuff). Your feedback is highly valued!
+For any questions or support, you can reach out to us on [GitHub](https://github.com/andersmmg/fallout-stuff). Your
+feedback is highly valued!
 
 
