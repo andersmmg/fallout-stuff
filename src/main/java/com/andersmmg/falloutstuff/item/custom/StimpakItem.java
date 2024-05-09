@@ -25,7 +25,6 @@ public class StimpakItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
-        FalloutStuff.LOGGER.info(FalloutStuff.CONFIG.stimpakHealAmt() + " heal amount");
 
         if (user.getHealth() < user.getMaxHealth()) {
             user.heal(FalloutStuff.CONFIG.stimpakHealAmt());
