@@ -32,6 +32,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PLAIN_DARK_WOOD_DOOR);
                         entries.add(ModBlocks.FILE_CABINET_BLOCK);
                         entries.add(ModBlocks.FILE_CABINET_DARK_BLOCK);
+                        entries.add(ModBlocks.VAULT_SIGN_BLOCK);
 
                         entries.add(ModBlocks.VAULT_POSTER_BLOCK_1);
                         entries.add(ModBlocks.VAULT_POSTER_BLOCK_2);

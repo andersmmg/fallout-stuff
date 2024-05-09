@@ -4,7 +4,7 @@
 ](https://modrinth.com/mod/fallout-stuff)
 [![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)
 ](https://github.com/andersmmg/fallout-stuff)
-[![Issues](https://img.shields.io/github/issues-raw/andersmmg/fallout-stuff?style=for-the-badge&logo=github)
+[![Issues](https://img.shields.io/github/issues-raw/andersmmg/fallout-stuff?style=for-the-badge&logo=github&label=Issues)
 ](https://github.com/andersmmg/fallout-stuff/issues)
 
 ### Description:
@@ -13,7 +13,7 @@ Immerse yourself in the post-apocalyptic world of Fallout within Minecraft with 
 brings a variety of iconic items from the Fallout universe into your Minecraft world, including Nuka Cola, stimpaks,
 bobbleheads, container blocks, bottle caps, Fancy Lads Cakes, and more. Whether you're enhancing your Fallout roleplay,
 adding unique elements to your builds, or simply enjoying the fun of Fallout-inspired items, Fallout Stuff has
-everything you need.
+everything you need for inside and outside the vault.
 
 ### Features:
 
@@ -26,6 +26,7 @@ everything you need.
 - **Posters:** Decorate with Fallout themed posters, like vault posters and Pebbles the cat.
 - **Lights:** Large and small redstone-powered lights for your vaults lighting.
 - **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
+- **Vault Signs:** Show vault dwellers and visitors where to go with Vault-Tec style signs.
 
 ### Requirements:
 
@@ -43,7 +44,6 @@ everything you need.
 
 ### Planned Possible Features:
 
-- **Vault Signs**
 - **Sliding Doors**
 - **Crafting Recipes**
 - **Power Armor**

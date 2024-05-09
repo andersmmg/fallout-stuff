@@ -27,6 +27,9 @@ public class ModBlocks {
     public static final Block FILE_CABINET_DARK_BLOCK = registerBlock("file_cabinet_dark",
             new FileCabinetBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
+    public static final Block VAULT_SIGN_BLOCK = registerBlock("vault_sign",
+            new VaultSignBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
     public static final Block DANGER_IRON_BLOCK = registerBlock("danger_iron",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block DANGER_STRIPES_BLOCK = registerBlock("danger_stripes",

@@ -25,6 +25,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "alarm_be"),
                     FabricBlockEntityTypeBuilder.create(AlarmBlockEntity::new,
                             ModBlocks.ALARM_BLOCK).build());
+    public static final BlockEntityType<VaultSignBlockEntity> VAULT_SIGN_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "vault_sign_be"),
+                    FabricBlockEntityTypeBuilder.create(VaultSignBlockEntity::new,
+                            ModBlocks.VAULT_SIGN_BLOCK).build());
 
     public static void registerBlockEntities() {
         FalloutStuff.LOGGER.info("Registering Block Entities for " + FalloutStuff.MOD_ID);

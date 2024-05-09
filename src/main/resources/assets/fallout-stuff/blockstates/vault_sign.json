@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "fallout-stuff:block/vault_sign",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "fallout-stuff:block/vault_sign"
+    },
+    "facing=south": {
+      "model": "fallout-stuff:block/vault_sign",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fallout-stuff:block/vault_sign",
+      "y": 270
+    }
+  }
+}

@@ -1,8 +1,11 @@
+import org.jetbrains.changelog.Changelog
+
 plugins {
     id 'fabric-loom' version '1.5-SNAPSHOT'
     id 'maven-publish'
     id "com.modrinth.minotaur" version "2.+"
     id "com.github.breadmoirai.github-release" version "2.4.1"
+    id 'org.jetbrains.changelog' version '2.2.0'
 }
 
 version = project.mod_version
@@ -24,14 +27,14 @@ repositories {
 }
 
 loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        "fallout-stuff" {
-            sourceSet sourceSets.main
-            sourceSet sourceSets.client
-        }
-    }
+//    splitEnvironmentSourceSets()
+//
+//    mods {
+//        "fallout-stuff" {
+//            sourceSet sourceSets.main
+//            sourceSet sourceSets.client
+//        }
+//    }
 
 }
 
@@ -107,21 +110,24 @@ publishing {
     }
 }
 
+changelog {
+    repositoryUrl = "https://github.com/andersmmg/fallout-stuff"
+}
+
 modrinth {
     token = MODRINTH_TOKEN
-    // Remember to have the MODRINTH_TOKEN environment variable set or else this will fail - just make sure it stays private!
-    projectId = "1PPAAFX8" // This can be the project ID or the slug. Either will work!
-    versionType = "release" // This is the default -- can also be `beta` or `alpha`
-    uploadFile = remapJar // With Loom, this MUST be set to `remapJar` instead of `jar`!
-//    gameVersions = ["1.20", "1.20.1", "1.20.2"] // Must be an array, even with only one version
-//    loaders = ["fabric"] // Must also be an array - no need to specify this if you're using Loom or ForgeGradle
+    projectId = "1PPAAFX8"
+    versionType = "release"
+    uploadFile = remapJar
     syncBodyFrom = rootProject.file("README.md").text
+    changelog = project.changelog.renderItem(project.changelog.getLatest(), Changelog.OutputType.MARKDOWN)
     tasks.modrinth.dependsOn(tasks.modrinthSyncBody)
     versionName = "${project.mod_version}+${project.minecraft_version} ${project.mod_name}"
     dependencies {
         required.project "fabric-api"
         required.project "owo-lib"
     }
+//    debugMode = true
 }
 
 githubRelease {
@@ -129,15 +135,10 @@ githubRelease {
     owner = "andersmmg"
     draft = false
     releaseName = "${mod_version}+${minecraft_version}"
-    body = provider {
-        """\
-## CHANGELOG
-${changelog().call()}
-"""
-    }
+    body = project.changelog.renderItem(project.changelog.getLatest(), Changelog.OutputType.MARKDOWN)
     releaseAssets = remapJar
     allowUploadToExisting = false
-    dryRun = false
+//    dryRun = true
 }
 
 task uploadRelease {
