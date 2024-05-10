@@ -112,6 +112,9 @@ publishing {
 
 changelog {
     repositoryUrl = "https://github.com/andersmmg/fallout-stuff"
+    groups = ["Added", "Changed", "Deprecated", "Removed", "Fixed"]
+    keepUnreleasedSection = true
+    version = mod_version
 }
 
 modrinth {
@@ -142,6 +145,5 @@ githubRelease {
 }
 
 task uploadRelease {
-    dependsOn tasks.named('modrinth')
-    dependsOn tasks.named('githubRelease')
+    dependsOn 'modrinth', 'githubRelease'
 }
