@@ -15,6 +15,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+## [1.3.1] - 2024-05-10
+
+### Fixed
+
+- Missing Vault Sign in creative tab
+
 ## [1.3.0] - 2024-05-10
 
 ### Changed
@@ -60,8 +66,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.1...HEAD
 
+[1.3.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.0.4...v1.1.0

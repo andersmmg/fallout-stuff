@@ -31,6 +31,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.DANGER_IRON_BLOCK);
             entries.add(ModBlocks.DANGER_STRIPES_BLOCK);
             entries.add(ModBlocks.PLAIN_DARK_WOOD_DOOR);
+            entries.add(ModBlocks.VAULT_SIGN_BLOCK);
         }, false);
         FALLOUT_GROUP.addCustomTab(Icon.of(ModItems.NUKA_COLA), "food", (displayContext, entries) -> {
             entries.add(ModItems.SNACK_CAKES);
