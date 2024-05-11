@@ -16,6 +16,10 @@ public class ModItemGroups {
         FALLOUT_GROUP.addCustomTab(Icon.of(ModItems.CAP), "general", (displayContext, entries) -> {
             entries.add(ModItems.CAP);
             entries.add(ModItems.STIMPAK);
+            entries.add(ModItems.POWER_ARMOR_HELMET);
+//            entries.add(ModItems.POWER_ARMOR_CHESTPLATE);
+//            entries.add(ModItems.POWER_ARMOR_LEGGINGS);
+//            entries.add(ModItems.POWER_ARMOR_BOOTS);
 
             FalloutStuff.LOGGER.info(FALLOUT_GROUP.getSearchTabStacks() + "");
         }, false);

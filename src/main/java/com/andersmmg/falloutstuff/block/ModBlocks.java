@@ -40,6 +40,9 @@ public class ModBlocks {
     public static final Block ALARM_BLOCK = registerBlock("alarm_block",
             new AlarmBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
+    public static final Block POWER_ARMOR_HELMET_BLOCK = registerBlockOnly("power_armor_helmet",
+            new PowerArmorHelmetBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.METAL).nonOpaque()));
+
     public static final Block RED_BUTTON = registerBlock("red_button",
             new ButtonBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_BUTTON), BlockSetType.IRON, 10, false));
     public static final Block PLAIN_DARK_WOOD_DOOR = registerBlock("plain_dark_wood_door",
