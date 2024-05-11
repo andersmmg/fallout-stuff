@@ -23,6 +23,7 @@ public class ModItems {
     public static final Item NUKA_COLA_BOTTLE = registerItem("nuka_cola_bottle", new Item(new FabricItemSettings()));
 
     public static final Item BOX_BLOCK = Items.register(new BlockItem(ModBlocks.BOX_BLOCK, new Item.Settings().maxCount(1)));
+    public static final Item LARGE_BOX_BLOCK = Items.register(new BlockItem(ModBlocks.LARGE_BOX_BLOCK, new Item.Settings().maxCount(1)));
     public static final Item CRAM_ITEM = Items.register(new BlockItem(ModBlocks.CRAM_BLOCK, new Item.Settings().food(ModFoodComponents.CRAM).maxCount(16)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {

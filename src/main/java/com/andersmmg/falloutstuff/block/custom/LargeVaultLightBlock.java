@@ -114,36 +114,24 @@ public class LargeVaultLightBlock extends FacingBlock {
         return state.get(FACING);
     }
 
-    private static final VoxelShape VAULT_LIGHT = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 0, 15, 16, 16, 16), Block.createCuboidShape(2, 2, 14, 14, 14, 15), BooleanBiFunction.OR);
-    private static final VoxelShape VAULT_LIGHT_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_UP = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 0, 0, 16, 1, 16), Block.createCuboidShape(2, 1, 2, 14, 2, 14), BooleanBiFunction.OR);
-    private static final VoxelShape VAULT_LIGHT_DOWN = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 15, 0, 16, 16, 16), Block.createCuboidShape(2, 14, 2, 14, 15, 14), BooleanBiFunction.OR);
+    private static final VoxelShape VOXEL_SHAPE = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 0, 15, 16, 16, 16), Block.createCuboidShape(2, 2, 14, 14, 14, 15), BooleanBiFunction.OR);
+    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_UP = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 0, 0, 16, 1, 16), Block.createCuboidShape(2, 1, 2, 14, 2, 14), BooleanBiFunction.OR);
+    private static final VoxelShape VOXEL_SHAPE_DOWN = VoxelShapes.combineAndSimplify(Block.createCuboidShape(0, 15, 0, 16, 16, 16), Block.createCuboidShape(2, 14, 2, 14, 15, 14), BooleanBiFunction.OR);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);
-        switch (facing) {
-            case SOUTH: {
-                return VAULT_LIGHT_SOUTH;
-            }
-            case EAST: {
-                return VAULT_LIGHT_EAST;
-            }
-            case WEST: {
-                return VAULT_LIGHT_WEST;
-            }
-            case UP: {
-                return VAULT_LIGHT_UP;
-            }
-            case DOWN: {
-                return VAULT_LIGHT_DOWN;
-            }
-            default: {
-                return VAULT_LIGHT;
-            }
-        }
+        return switch (facing) {
+            case SOUTH -> VOXEL_SHAPE_SOUTH;
+            case EAST -> VOXEL_SHAPE_EAST;
+            case WEST -> VOXEL_SHAPE_WEST;
+            case UP -> VOXEL_SHAPE_UP;
+            case DOWN -> VOXEL_SHAPE_DOWN;
+            default -> VOXEL_SHAPE;
+        };
     }
 
     @Override

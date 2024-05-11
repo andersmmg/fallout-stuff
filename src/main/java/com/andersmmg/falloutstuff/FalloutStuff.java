@@ -3,7 +3,6 @@ package com.andersmmg.falloutstuff;
 import com.andersmmg.falloutstuff.block.ModBlocks;
 import com.andersmmg.falloutstuff.block.entity.ModBlockEntities;
 import com.andersmmg.falloutstuff.block.entity.VaultSignBlockEntity;
-import com.andersmmg.falloutstuff.client.screen.ModScreenHandlers;
 import com.andersmmg.falloutstuff.config.ModConfig;
 import com.andersmmg.falloutstuff.item.ModItemGroups;
 import com.andersmmg.falloutstuff.item.ModItems;
@@ -35,7 +34,6 @@ public class FalloutStuff implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModBlockEntities.registerBlockEntities();
-		ModScreenHandlers.registerScreenHandlers();
 		ModSounds.registerSounds();
 
         // Register sign update packet

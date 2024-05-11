@@ -12,7 +12,7 @@ public class ModBlockEntities {
     public static final BlockEntityType<BoxBlockEntity> BOX_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "box_be"),
                     FabricBlockEntityTypeBuilder.create(BoxBlockEntity::new,
-                            ModBlocks.BOX_BLOCK).build());
+                            ModBlocks.BOX_BLOCK, ModBlocks.LARGE_BOX_BLOCK).build());
     public static final BlockEntityType<VaultCrateBlockEntity> VAULT_CRATE_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "vault_crate_be"),
                     FabricBlockEntityTypeBuilder.create(VaultCrateBlockEntity::new,

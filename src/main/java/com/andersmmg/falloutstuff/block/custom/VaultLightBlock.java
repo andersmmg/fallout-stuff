@@ -105,36 +105,24 @@ public class VaultLightBlock extends FacingBlock {
         return state.get(FACING);
     }
 
-    private static final VoxelShape VAULT_LIGHT = VoxelShapes.combineAndSimplify(Block.createCuboidShape(4, 4, 15, 12, 12, 16), Block.createCuboidShape(5, 5, 14, 11, 11, 15), BooleanBiFunction.OR);
-    private static final VoxelShape VAULT_LIGHT_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VAULT_LIGHT);
-    private static final VoxelShape VAULT_LIGHT_UP = VoxelShapes.union(createCuboidShape(5, 1, 5, 11, 2, 11));
-    private static final VoxelShape VAULT_LIGHT_DOWN = VoxelShapes.union(createCuboidShape(4.0, 15.0, 4.0, 12.0, 16.0, 12.0));
+    private static final VoxelShape VOXEL_SHAPE = VoxelShapes.combineAndSimplify(Block.createCuboidShape(4, 4, 15, 12, 12, 16), Block.createCuboidShape(5, 5, 14, 11, 11, 15), BooleanBiFunction.OR);
+    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_UP = VoxelShapes.union(createCuboidShape(5, 1, 5, 11, 2, 11));
+    private static final VoxelShape VOXEL_SHAPE_DOWN = VoxelShapes.union(createCuboidShape(4.0, 15.0, 4.0, 12.0, 16.0, 12.0));
     
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);
-        switch (facing) {
-            case SOUTH: {
-                return VAULT_LIGHT_SOUTH;
-            }
-            case EAST: {
-                return VAULT_LIGHT_EAST;
-            }
-            case WEST: {
-                return VAULT_LIGHT_WEST;
-            }
-            case UP: {
-                return VAULT_LIGHT_UP;
-            }
-            case DOWN: {
-                return VAULT_LIGHT_DOWN;
-            }
-            default: {
-                return VAULT_LIGHT;
-            }
-        }
+        return switch (facing) {
+            case SOUTH -> VOXEL_SHAPE_SOUTH;
+            case EAST -> VOXEL_SHAPE_EAST;
+            case WEST -> VOXEL_SHAPE_WEST;
+            case UP -> VOXEL_SHAPE_UP;
+            case DOWN -> VOXEL_SHAPE_DOWN;
+            default -> VOXEL_SHAPE;
+        };
     }
 
     @Override

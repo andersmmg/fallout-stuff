@@ -43,6 +43,8 @@ public class ModItemGroups {
             entries.add(ModBlocks.FILE_CABINET_BLOCK);
             entries.add(ModBlocks.FILE_CABINET_DARK_BLOCK);
             entries.add(ModBlocks.VAULT_CRATE_BLOCK);
+            entries.add(ModBlocks.BOX_BLOCK);
+            entries.add(ModBlocks.LARGE_BOX_BLOCK);
 
             entries.add(ModBlocks.ALARM_BLOCK);
             entries.add(ModBlocks.RED_BUTTON);

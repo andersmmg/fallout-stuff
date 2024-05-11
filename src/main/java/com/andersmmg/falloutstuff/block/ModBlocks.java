@@ -20,6 +20,8 @@ public class ModBlocks {
 
     public static final Block BOX_BLOCK = registerBlockOnly("box",
             new BoxBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).strength(0.8f).sounds(BlockSoundGroup.WOOL).nonOpaque()));
+    public static final Block LARGE_BOX_BLOCK = registerBlockOnly("large_box",
+            new LargeBoxBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).strength(0.8f).sounds(BlockSoundGroup.WOOL).nonOpaque()));
     public static final Block VAULT_CRATE_BLOCK = registerBlock("vault_crate",
             new VaultCrateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block FILE_CABINET_BLOCK = registerBlock("file_cabinet",

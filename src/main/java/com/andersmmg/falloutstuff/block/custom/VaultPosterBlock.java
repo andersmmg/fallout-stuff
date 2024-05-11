@@ -70,19 +70,19 @@ public class VaultPosterBlock extends FacingBlock{
         return state.get(FACING);
     }
 
-    private static final VoxelShape POSTER_SHAPE = Block.createCuboidShape(0, -2, 15.9, 16, 19, 16);
-    private static final VoxelShape POSTER_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, POSTER_SHAPE);
-    private static final VoxelShape POSTER_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, POSTER_SHAPE);
-    private static final VoxelShape POSTER_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, POSTER_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE = Block.createCuboidShape(0, -2, 15.9, 16, 19, 16);
+    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);
         return switch (facing) {
-            case SOUTH -> POSTER_SHAPE_SOUTH;
-            case EAST -> POSTER_SHAPE_EAST;
-            case WEST -> POSTER_SHAPE_WEST;
-            default -> POSTER_SHAPE;
+            case SOUTH -> VOXEL_SHAPE_SOUTH;
+            case EAST -> VOXEL_SHAPE_EAST;
+            case WEST -> VOXEL_SHAPE_WEST;
+            default -> VOXEL_SHAPE;
         };
     }
 

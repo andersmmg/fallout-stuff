@@ -12,10 +12,6 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -24,7 +20,6 @@ import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3i;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -118,28 +113,20 @@ public class VaultCrateBlock extends BlockWithEntity {
         return state.get(FACING);
     }
 
-    private static final VoxelShape BOX_SHAPE = VoxelShapes.union(createCuboidShape(0, 0, 2, 16, 11, 14));
-    private static final VoxelShape BOX_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, BOX_SHAPE);
-    private static final VoxelShape BOX_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, BOX_SHAPE);
-    private static final VoxelShape BOX_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, BOX_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE = VoxelShapes.union(createCuboidShape(0, 0, 2, 16, 11, 14));
+    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);
-        switch (facing) {
-            case SOUTH: {
-                return BOX_SHAPE_SOUTH;
-            }
-            case EAST: {
-                return BOX_SHAPE_EAST;
-            }
-            case WEST: {
-                return BOX_SHAPE_WEST;
-            }
-            default: {
-                return BOX_SHAPE;
-            }
-        }
+        return switch (facing) {
+            case SOUTH -> VOXEL_SHAPE_SOUTH;
+            case EAST -> VOXEL_SHAPE_EAST;
+            case WEST -> VOXEL_SHAPE_WEST;
+            default -> VOXEL_SHAPE;
+        };
     }
 
     @Override

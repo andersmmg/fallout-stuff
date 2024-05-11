@@ -7,13 +7,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Placeable Cram food and block
+- Larger cardboard box variant
+
 ### Changed
+
+- Restructured classes
+- Vault sign can now be placed on ceilings
 
 ### Deprecated
 
 ### Removed
 
+- Unused resources
+
 ### Fixed
+
+- Vault sign break particle
 
 ## [1.3.1] - 2024-05-10
 

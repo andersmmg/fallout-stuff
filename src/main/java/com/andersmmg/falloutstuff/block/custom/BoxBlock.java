@@ -48,7 +48,7 @@ public class BoxBlock extends BlockWithEntity {
 
     public BoxBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(OPEN, false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(OPEN, false));
     }
 
     @Override
@@ -89,7 +89,7 @@ public class BoxBlock extends BlockWithEntity {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof BoxBlockEntity boxBlockEntity) {
             if (!world.isClient && player.isCreative() && !boxBlockEntity.isEmpty()) {
-                ItemStack itemStack = BoxBlock.getItemStack();
+                ItemStack itemStack = getItemStack();
                 blockEntity.setStackNbt(itemStack);
                 if (boxBlockEntity.hasCustomName()) {
                     itemStack.setCustomName(boxBlockEntity.getCustomName());
@@ -104,7 +104,7 @@ public class BoxBlock extends BlockWithEntity {
         super.onBreak(world, pos, state, player);
     }
 
-    public static ItemStack getItemStack() {
+    public ItemStack getItemStack() {
         return new ItemStack(ModBlocks.BOX_BLOCK);
     }
 
@@ -200,28 +200,20 @@ public class BoxBlock extends BlockWithEntity {
         return state.get(FACING);
     }
 
-    private static final VoxelShape BOX_SHAPE = VoxelShapes.union(createCuboidShape(1, 0, 1, 15, 10, 15));
-    private static final VoxelShape BOX_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, BOX_SHAPE);
-    private static final VoxelShape BOX_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, BOX_SHAPE);
-    private static final VoxelShape BOX_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, BOX_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE = VoxelShapes.union(createCuboidShape(1, 0, 1, 15, 10, 15));
+    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);
-        switch (facing) {
-            case SOUTH: {
-                return BOX_SHAPE_SOUTH;
-            }
-            case EAST: {
-                return BOX_SHAPE_EAST;
-            }
-            case WEST: {
-                return BOX_SHAPE_WEST;
-            }
-            default: {
-                return BOX_SHAPE;
-            }
-        }
+        return switch (facing) {
+            case SOUTH -> VOXEL_SHAPE_SOUTH;
+            case EAST -> VOXEL_SHAPE_EAST;
+            case WEST -> VOXEL_SHAPE_WEST;
+            default -> VOXEL_SHAPE;
+        };
     }
 
     @Override

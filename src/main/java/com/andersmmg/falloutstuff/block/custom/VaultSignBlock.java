@@ -3,6 +3,8 @@ package com.andersmmg.falloutstuff.block.custom;
 import com.andersmmg.falloutstuff.block.entity.VaultSignBlockEntity;
 import com.andersmmg.falloutstuff.client.screen.VaultSignScreen;
 import com.andersmmg.falloutstuff.util.VoxelUtils;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.MinecraftClient;
@@ -35,6 +37,7 @@ public class VaultSignBlock extends BlockWithEntity {
     }
 
     @Override
+    @Environment(EnvType.CLIENT)
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof VaultSignBlockEntity blockEntity1) {
@@ -92,28 +95,20 @@ public class VaultSignBlock extends BlockWithEntity {
         return state.get(FACING);
     }
 
-    private static final VoxelShape SIGN_SHAPE = Block.createCuboidShape(1, 11, 13.75, 15, 15.5, 16);
-    private static final VoxelShape SIGN_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, SIGN_SHAPE);
-    private static final VoxelShape SIGN_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, SIGN_SHAPE);
-    private static final VoxelShape SIGN_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, SIGN_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE = Block.createCuboidShape(1, 11.5, 13.75, 15, 16, 16.5);
+    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
+    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction facing = getDirection(state);
-        switch (facing) {
-            case SOUTH: {
-                return SIGN_SHAPE_SOUTH;
-            }
-            case EAST: {
-                return SIGN_SHAPE_EAST;
-            }
-            case WEST: {
-                return SIGN_SHAPE_WEST;
-            }
-            default: {
-                return SIGN_SHAPE;
-            }
-        }
+        return switch (facing) {
+            case SOUTH -> VOXEL_SHAPE_SOUTH;
+            case EAST -> VOXEL_SHAPE_EAST;
+            case WEST -> VOXEL_SHAPE_WEST;
+            default -> VOXEL_SHAPE;
+        };
     }
 
     @Override
@@ -123,9 +118,16 @@ public class VaultSignBlock extends BlockWithEntity {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        Direction direction = state.get(FACING);
+
+        Direction direction = Direction.DOWN;
         BlockPos blockPos = pos.offset(direction.getOpposite());
         BlockState blockState = world.getBlockState(blockPos);
+        if (blockState.isSideSolidFullSquare(world, blockPos, direction)) {
+            return true;
+        }
+        direction = state.get(FACING);
+        blockPos = pos.offset(direction.getOpposite());
+        blockState = world.getBlockState(blockPos);
         return blockState.isSideSolidFullSquare(world, blockPos, direction);
     }
 
