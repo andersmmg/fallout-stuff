@@ -22,7 +22,8 @@ everything you need for inside and outside the vault.
 - **Bobblehead:** Show your Vault-Tec pride with a Vault-Boy bobblehead.
 - **Container Blocks:** Organize and store your loot and essentials.
 - **Bottle Caps:** Currency for trading and survival in the wasteland.
-- **Fancy Lads Cakes:** Satisfy your sweet tooth with this delicious treat from the Fallout universe.
+- **Fancy Lads Cakes:** Satisfy your sweet tooth with this delicious treat!.
+- **Cram:** Eat it or stick it on the counter to sit. It doesn't taste great, but it lasts forever!
 - **Posters:** Decorate with Fallout themed posters, like vault posters and Pebbles the cat.
 - **Lights:** Large and small redstone-powered lights for your vaults lighting.
 - **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
