@@ -7,6 +7,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+## [1.4.0] - 2024-05-10
+
+### Added
+
 - Placeable Cram food and block
 - Larger cardboard box variant
 
@@ -14,8 +26,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Restructured classes
 - Vault sign can now be placed on ceilings
-
-### Deprecated
 
 ### Removed
 
@@ -76,8 +86,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.1...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.4.0...HEAD
 
+[1.4.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.1.0...v1.2.0
