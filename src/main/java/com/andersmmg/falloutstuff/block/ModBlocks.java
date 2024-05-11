@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static final Block VAULT_LIGHT_BLOCK = registerBlock("vault_light",
             new VaultLightBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
-    public static final Block VAULT_CEILING_LIGHT_BLOCK = registerBlock("large_vault_light",
+    public static final Block LARGE_VAULT_LIGHT_BLOCK = registerBlock("large_vault_light",
             new LargeVaultLightBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
 
     public static final Block BOX_BLOCK = registerBlockOnly("box",

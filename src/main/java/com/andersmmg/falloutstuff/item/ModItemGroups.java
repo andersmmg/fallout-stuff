@@ -49,7 +49,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.ALARM_BLOCK);
             entries.add(ModBlocks.RED_BUTTON);
             entries.add(ModBlocks.VAULT_LIGHT_BLOCK);
-            entries.add(ModBlocks.VAULT_CEILING_LIGHT_BLOCK);
+            entries.add(ModBlocks.LARGE_VAULT_LIGHT_BLOCK);
         }, false);
         FALLOUT_GROUP.initialize();
     }
