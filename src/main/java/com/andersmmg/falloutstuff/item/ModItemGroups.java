@@ -37,6 +37,7 @@ public class ModItemGroups {
             entries.add(ModItems.SNACK_CAKES);
             entries.add(ModItems.NUKA_COLA);
             entries.add(ModItems.NUKA_COLA_BOTTLE);
+            entries.add(ModItems.CRAM_ITEM);
         }, false);
         FALLOUT_GROUP.addCustomTab(Icon.of(ModBlocks.FILE_CABINET_BLOCK), "functional", (displayContext, entries) -> {
             entries.add(ModBlocks.FILE_CABINET_BLOCK);

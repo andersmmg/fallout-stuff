@@ -60,6 +60,8 @@ public class ModBlocks {
 
     public static final Block VAULT_BOY_STATUE = registerBlock("vault_boy_statue",
             new StatueBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).nonOpaque()));
+    public static final Block CRAM_BLOCK = registerBlockOnly("cram",
+            new CramBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {
