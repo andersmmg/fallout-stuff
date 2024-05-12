@@ -31,6 +31,7 @@ everything you need for inside and outside the vault.
 - **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
 - **Vault Signs:** Show vault dwellers and visitors where to go with Vault-Tec style signs.
 - **Nuka-Cola Vending Machine:** Keep your Nuka-Cola cold and fresh in the perfect place.
+- **Cash Register:** Store money for diner customers, or just use it for looks!
 
 ### Requirements:
 
@@ -51,6 +52,9 @@ everything you need for inside and outside the vault.
 - **Sliding Doors**
 - **Crafting Recipes**
 - **Power Armor**
+- **Pre-War Money**
+- **Red Toolbox**
+- **Sugar Bombs**
 
 Please note that these features are planned possibilities and not guaranteed. As a solo developer, I'll do my best to
 implement them, but development priorities may change.
