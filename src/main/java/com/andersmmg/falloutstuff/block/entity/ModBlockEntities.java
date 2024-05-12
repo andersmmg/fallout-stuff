@@ -21,6 +21,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "file_cabinet_be"),
                     FabricBlockEntityTypeBuilder.create(FileCabinetBlockEntity::new,
                             ModBlocks.FILE_CABINET_BLOCK, ModBlocks.FILE_CABINET_DARK_BLOCK).build());
+    public static final BlockEntityType<NukaVendingBlockEntity> NUKA_VENDING_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "nuka_vending_be"),
+                    FabricBlockEntityTypeBuilder.create(NukaVendingBlockEntity::new,
+                            ModBlocks.NUKA_VENDING_BLOCK).build());
     public static final BlockEntityType<AlarmBlockEntity> ALARM_BLOCK_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "alarm_be"),
                     FabricBlockEntityTypeBuilder.create(AlarmBlockEntity::new,
