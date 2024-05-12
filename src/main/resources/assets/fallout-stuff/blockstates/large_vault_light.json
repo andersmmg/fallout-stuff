@@ -1,7 +1,7 @@
 {
   "variants": {
     "facing=east,lit=true": {
-      "model": "fallout-stuff:block/vault_light_on",
+      "model": "fallout-stuff:block/large_vault_light_on",
       "y": 90
     },
     "facing=north,lit=true": {

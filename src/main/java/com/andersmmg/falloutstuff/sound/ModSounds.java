@@ -13,6 +13,8 @@ public class ModSounds {
     public static final SoundEvent BOX_OPEN = registerSoundEvent("box_open");
     public static final SoundEvent BOX_CLOSE = registerSoundEvent("box_close");
     public static final SoundEvent ALARM = registerSoundEvent("alarm");
+    public static final SoundEvent NUKA_VENDING_OPEN = registerSoundEvent("nuka_vending_open");
+    public static final SoundEvent NUKA_VENDING_CLOSE = registerSoundEvent("nuka_vending_close");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(FalloutStuff.MOD_ID, name);

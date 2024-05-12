@@ -34,5 +34,17 @@
     "sounds": [
       "fallout-stuff:alarm_1"
     ]
+  },
+  "nuka_vending_open": {
+    "subtitle": "sounds.fallout-stuff.nuka_vending_open",
+    "sounds": [
+      "fallout-stuff:nuka_vending_open"
+    ]
+  },
+  "nuka_vending_close": {
+    "subtitle": "sounds.fallout-stuff.nuka_vending_close",
+    "sounds": [
+      "fallout-stuff:nuka_vending_close"
+    ]
   }
 }

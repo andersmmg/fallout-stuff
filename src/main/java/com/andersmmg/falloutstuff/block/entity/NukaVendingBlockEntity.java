@@ -28,13 +28,13 @@ public class NukaVendingBlockEntity extends LootableContainerBlockEntity {
 
         @Override
         protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
-            NukaVendingBlockEntity.this.playSound(state, ModSounds.FILECABINET_OPEN);
+            NukaVendingBlockEntity.this.playSound(state, ModSounds.NUKA_VENDING_OPEN);
             NukaVendingBlockEntity.this.setOpen(state, true);
         }
 
         @Override
         protected void onContainerClose(World world, BlockPos pos, BlockState state) {
-            NukaVendingBlockEntity.this.playSound(state, ModSounds.FILECABINET_CLOSE);
+            NukaVendingBlockEntity.this.playSound(state, ModSounds.NUKA_VENDING_CLOSE);
             NukaVendingBlockEntity.this.setOpen(state, false);
         }
 

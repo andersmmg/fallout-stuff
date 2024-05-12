@@ -110,7 +110,7 @@ public class NukaVendingBlock extends BlockWithEntity {
         return state.get(FACING);
     }
 
-    private static final VoxelShape VOXEL_SHAPE = Block.createCuboidShape(0, 0, 2, 16, 28, 16);
+    private static final VoxelShape VOXEL_SHAPE = Block.createCuboidShape(1, 0, 3, 16, 28, 16);
     private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
     private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
     private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
