@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 
 - Nuka-Cola giving 2 bottle caps sometimes
+- Vault signs not updating on client when changed on server
 
 ## [1.6.0] - 2024-05-12
 
