@@ -28,6 +28,7 @@ everything you need for inside and outside the vault.
 - **Lights:** Large and small redstone-powered lights for your vaults lighting.
 - **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
 - **Vault Signs:** Show vault dwellers and visitors where to go with Vault-Tec style signs.
+- **Nuka-Cola Vending Machine:** Keep your Nuka-Cola cold and fresh in the perfect place.
 
 ### Requirements:
 
