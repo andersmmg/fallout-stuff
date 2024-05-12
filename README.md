@@ -1,4 +1,6 @@
-## Fallout Stuff Mod
+![Fallout Stuff](https://github.com/andersmmg/fallout-stuff/assets/16022203/57fa9af6-d83d-4d78-b4c2-d73cbc1004dc)
+
+![mod_blocks](https://github.com/andersmmg/fallout-stuff/assets/16022203/0f2e1ccc-c35d-4da8-be6b-d37f172fef6a)
 
 [![Modrinth](https://img.shields.io/badge/Modrinth-1bd96a?style=for-the-badge&logo=modrinth&logoColor=white)
 ](https://modrinth.com/mod/fallout-stuff)
@@ -6,8 +8,6 @@
 ](https://github.com/andersmmg/fallout-stuff)
 [![Issues](https://img.shields.io/github/issues-raw/andersmmg/fallout-stuff?style=for-the-badge&logo=github&label=Issues)
 ](https://github.com/andersmmg/fallout-stuff/issues)
-
-![mod_blocks](https://github.com/andersmmg/fallout-stuff/assets/16022203/0f2e1ccc-c35d-4da8-be6b-d37f172fef6a)
 
 ### Description:
 
