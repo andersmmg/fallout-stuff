@@ -7,8 +7,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
-- Nuka-Cola vending machine
-
 ### Changed
 
 ### Deprecated
@@ -16,6 +14,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Removed
 
 ### Fixed
+
+## [1.6.0] - 2024-05-12
+
+### Added
+
+- Nuka-Cola vending machine
 
 ## [1.5.0] - 2024-05-11
 
@@ -101,8 +105,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.0...HEAD
 
+[1.6.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.3.1...v1.4.0
