@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+## [1.6.1] - 2024-05-12
+
+### Fixed
+
 - Nuka-Cola giving 2 bottle caps sometimes
 - Vault signs not updating on client when changed on server
 
@@ -108,8 +112,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.1...HEAD
 
+[1.6.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.4.0...v1.4.1
