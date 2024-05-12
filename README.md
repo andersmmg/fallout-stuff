@@ -7,6 +7,8 @@
 [![Issues](https://img.shields.io/github/issues-raw/andersmmg/fallout-stuff?style=for-the-badge&logo=github&label=Issues)
 ](https://github.com/andersmmg/fallout-stuff/issues)
 
+![mod_blocks](https://github.com/andersmmg/fallout-stuff/assets/16022203/0f2e1ccc-c35d-4da8-be6b-d37f172fef6a)
+
 ### Description:
 
 Immerse yourself in the post-apocalyptic world of Fallout within Minecraft with the Fallout Stuff mod! This Fabric mod
