@@ -30,6 +30,8 @@ public class ModBlocks {
             new FileCabinetBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block NUKA_VENDING_BLOCK = registerBlock("nuka_vending_machine",
             new NukaVendingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+    public static final Block CASH_REGISTER = registerBlock("cash_register",
+            new CashRegisterBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
     public static final Block VAULT_SIGN_BLOCK = registerBlock("vault_sign",
             new VaultSignBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));

@@ -24,6 +24,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DANGER_IRON_BLOCK)
                 .add(ModBlocks.VAULT_SIGN_BLOCK)
                 .add(ModBlocks.NUKA_VENDING_BLOCK)
+                .add(ModBlocks.CASH_REGISTER)
                 .add(ModBlocks.DANGER_STRIPES_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
@@ -33,6 +34,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DANGER_IRON_BLOCK)
                 .add(ModBlocks.VAULT_SIGN_BLOCK)
                 .add(ModBlocks.NUKA_VENDING_BLOCK)
+                .add(ModBlocks.CASH_REGISTER)
                 .add(ModBlocks.DANGER_STRIPES_BLOCK);
     }
 }

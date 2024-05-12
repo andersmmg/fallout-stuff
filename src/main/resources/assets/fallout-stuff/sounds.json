@@ -46,5 +46,17 @@
     "sounds": [
       "fallout-stuff:nuka_vending_close"
     ]
+  },
+  "cash_register_open": {
+    "subtitle": "sounds.fallout-stuff.cash_register_open",
+    "sounds": [
+      "fallout-stuff:cash_register_open"
+    ]
+  },
+  "cash_register_close": {
+    "subtitle": "sounds.fallout-stuff.cash_register_close",
+    "sounds": [
+      "fallout-stuff:cash_register_close"
+    ]
   }
 }

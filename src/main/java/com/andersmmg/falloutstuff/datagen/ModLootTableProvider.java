@@ -35,6 +35,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FILE_CABINET_BLOCK);
         addDrop(ModBlocks.FILE_CABINET_DARK_BLOCK);
         addDrop(ModBlocks.NUKA_VENDING_BLOCK);
+        addDrop(ModBlocks.CASH_REGISTER);
         addDrop(ModBlocks.POWER_ARMOR_HELMET_BLOCK);
         addDrop(ModBlocks.ALARM_BLOCK);
         addDrop(ModBlocks.VAULT_SIGN_BLOCK);

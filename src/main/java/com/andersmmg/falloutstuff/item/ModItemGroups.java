@@ -50,6 +50,7 @@ public class ModItemGroups {
             entries.add(ModBlocks.BOX_BLOCK);
             entries.add(ModBlocks.LARGE_BOX_BLOCK);
             entries.add(ModBlocks.NUKA_VENDING_BLOCK);
+            entries.add(ModBlocks.CASH_REGISTER);
 
             entries.add(ModBlocks.ALARM_BLOCK);
             entries.add(ModBlocks.RED_BUTTON);
