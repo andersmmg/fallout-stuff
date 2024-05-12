@@ -1,6 +1,5 @@
 package com.andersmmg.falloutstuff.item.custom;
 
-import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.item.ModItems;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
@@ -8,7 +7,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
-import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
@@ -25,8 +23,7 @@ public class NukaColaItem extends Item {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (user instanceof ServerPlayerEntity) {
-            ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) user;
+        if (user instanceof ServerPlayerEntity serverPlayerEntity) {
             Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
             // Give the player a bottle cap
@@ -38,18 +35,15 @@ public class NukaColaItem extends Item {
         }
         if (!world.isClient) {
             user.clearStatusEffects();
-        }
-        if (stack.isEmpty()) {
-            return new ItemStack(ModItems.NUKA_COLA_BOTTLE);
-        } else {
-            if (user instanceof ServerPlayerEntity) {
-                ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) user;
-                Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
-                serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
-                // Give the player a bottle cap
-                serverPlayerEntity.giveItemStack(new ItemStack(ModItems.CAP));
-                serverPlayerEntity.giveItemStack(new ItemStack(ModItems.NUKA_COLA_BOTTLE));
-                user.heal(10);
+            if (stack.isEmpty()) {
+                return new ItemStack(ModItems.NUKA_COLA_BOTTLE);
+            } else {
+                if (user instanceof ServerPlayerEntity serverPlayerEntity) {
+                    Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
+                    serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
+                    serverPlayerEntity.giveItemStack(new ItemStack(ModItems.NUKA_COLA_BOTTLE));
+                    user.heal(10);
+                }
             }
         }
         return stack;
