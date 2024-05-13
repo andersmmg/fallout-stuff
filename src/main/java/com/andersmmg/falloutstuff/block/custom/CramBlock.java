@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
@@ -23,6 +24,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class CramBlock extends AbstractFloorFacingBlock {
     public static final IntProperty COUNT = IntProperty.of("count", 1, 3);
@@ -66,6 +69,18 @@ public class CramBlock extends AbstractFloorFacingBlock {
                 return ActionResult.PASS;
             }
         }
+    }
+
+    @Override
+    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+        return List.of(new ItemStack(ModItems.CRAM_ITEM).copyWithCount(state.get(COUNT)));
+    }
+
+    @Override
+    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+        ItemStack itemStack = super.getPickStack(world, pos, state);
+        itemStack.setCount(state.get(COUNT));
+        return itemStack;
     }
 
     @Override
