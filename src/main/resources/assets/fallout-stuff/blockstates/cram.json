@@ -1,20 +1,49 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,count=1": {
       "model": "fallout-stuff:block/cram",
       "y": 90
     },
-    "facing=north": {
+    "facing=north,count=1": {
       "model": "fallout-stuff:block/cram"
     },
-    "facing=south": {
+    "facing=south,count=1": {
       "model": "fallout-stuff:block/cram",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,count=1": {
       "model": "fallout-stuff:block/cram",
+      "y": 270
+    },
+    "facing=east,count=2": {
+      "model": "fallout-stuff:block/cram_2",
+      "y": 90
+    },
+    "facing=north,count=2": {
+      "model": "fallout-stuff:block/cram_2"
+    },
+    "facing=south,count=2": {
+      "model": "fallout-stuff:block/cram_2",
+      "y": 180
+    },
+    "facing=west,count=2": {
+      "model": "fallout-stuff:block/cram_2",
+      "y": 270
+    },
+    "facing=east,count=3": {
+      "model": "fallout-stuff:block/cram_3",
+      "y": 90
+    },
+    "facing=north,count=3": {
+      "model": "fallout-stuff:block/cram_3"
+    },
+    "facing=south,count=3": {
+      "model": "fallout-stuff:block/cram_3",
+      "y": 180
+    },
+    "facing=west,count=3": {
+      "model": "fallout-stuff:block/cram_3",
       "y": 270
     }
   }
 }
-

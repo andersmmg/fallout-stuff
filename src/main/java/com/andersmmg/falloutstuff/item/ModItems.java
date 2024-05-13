@@ -2,6 +2,7 @@ package com.andersmmg.falloutstuff.item;
 
 import com.andersmmg.falloutstuff.FalloutStuff;
 import com.andersmmg.falloutstuff.block.ModBlocks;
+import com.andersmmg.falloutstuff.item.custom.CramItem;
 import com.andersmmg.falloutstuff.item.custom.NukaColaItem;
 import com.andersmmg.falloutstuff.item.custom.PowerArmorHelmetItem;
 import com.andersmmg.falloutstuff.item.custom.StimpakItem;
@@ -29,7 +30,7 @@ public class ModItems {
     
     public static final Item BOX_BLOCK = Items.register(new BlockItem(ModBlocks.BOX_BLOCK, new Item.Settings().maxCount(1)));
     public static final Item LARGE_BOX_BLOCK = Items.register(new BlockItem(ModBlocks.LARGE_BOX_BLOCK, new Item.Settings().maxCount(1)));
-    public static final Item CRAM_ITEM = Items.register(new BlockItem(ModBlocks.CRAM_BLOCK, new Item.Settings().food(ModFoodComponents.CRAM).maxCount(16)));
+    public static final Item CRAM_ITEM = Items.register(new CramItem(ModBlocks.CRAM_BLOCK, new Item.Settings().food(ModFoodComponents.CRAM).maxCount(16)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(CAP);
@@ -38,6 +39,7 @@ public class ModItems {
     private static void addItemsToFoodItemGroup(FabricItemGroupEntries entries) {
         entries.add(SNACK_CAKES);
         entries.add(NUKA_COLA);
+        entries.add(CRAM_ITEM);
     }
 
     private static Item registerItem(String name, Item item) {

@@ -7,6 +7,9 @@ import net.minecraft.util.shape.VoxelShapes;
 public class VoxelUtils {
     public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
         VoxelShape[] buffer = new VoxelShape[]{ shape, VoxelShapes.empty() };
+
+        if (from == to) return shape;
+        if (from == Direction.UP || from == Direction.DOWN) return shape;
     
         int times = (to.getHorizontal() - from.getHorizontal() + 4) % 4;
         for (int i = 0; i < times; i++) {
@@ -16,5 +19,9 @@ public class VoxelUtils {
         }
     
         return buffer[0];
+    }
+
+    public static VoxelShape rotateShape(Direction to, VoxelShape shape) {
+        return rotateShape(Direction.NORTH, to, shape);
     }
 }

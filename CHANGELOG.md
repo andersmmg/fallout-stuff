@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Cram can now be placed up to 3 on one block
+
 ### Deprecated
 
 ### Removed
