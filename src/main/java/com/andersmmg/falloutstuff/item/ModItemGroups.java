@@ -20,8 +20,6 @@ public class ModItemGroups {
 //            entries.add(ModItems.POWER_ARMOR_CHESTPLATE);
 //            entries.add(ModItems.POWER_ARMOR_LEGGINGS);
 //            entries.add(ModItems.POWER_ARMOR_BOOTS);
-
-            FalloutStuff.LOGGER.info(FALLOUT_GROUP.getSearchTabStacks() + "");
         }, false);
         FALLOUT_GROUP.addCustomTab(Icon.of(ModBlocks.VAULT_POSTER_BLOCK_1), "decoration", (displayContext, entries) -> {
             entries.add(ModBlocks.VAULT_POSTER_BLOCK_1);

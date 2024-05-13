@@ -28,6 +28,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STIMPAK, Models.GENERATED);
         itemModelGenerator.register(ModItems.NUKA_COLA, Models.GENERATED);
         itemModelGenerator.register(ModItems.NUKA_COLA_BOTTLE, Models.GENERATED);
-
     }
 }
