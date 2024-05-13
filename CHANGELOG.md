@@ -9,13 +9,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
-- Cram can now be placed up to 3 on one block
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+## [1.7.1] - 2024-05-13
+
+### Changed
+
+- Cram can now be placed up to 3 on one block
 
 ## [1.7.0] - 2024-05-12
 
@@ -120,8 +124,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.0...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.1...HEAD
 
+[1.7.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.1...v1.7.0
 [1.6.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.5.0...v1.6.0
