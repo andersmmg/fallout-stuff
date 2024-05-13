@@ -114,19 +114,10 @@ public class VaultCrateBlock extends BlockWithEntity {
     }
 
     private static final VoxelShape VOXEL_SHAPE = VoxelShapes.union(createCuboidShape(0, 0, 2, 16, 11, 14));
-    private static final VoxelShape VOXEL_SHAPE_SOUTH = VoxelUtils.rotateShape(Direction.NORTH, Direction.SOUTH, VOXEL_SHAPE);
-    private static final VoxelShape VOXEL_SHAPE_EAST = VoxelUtils.rotateShape(Direction.NORTH, Direction.EAST, VOXEL_SHAPE);
-    private static final VoxelShape VOXEL_SHAPE_WEST = VoxelUtils.rotateShape(Direction.NORTH, Direction.WEST, VOXEL_SHAPE);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Direction facing = getDirection(state);
-        return switch (facing) {
-            case SOUTH -> VOXEL_SHAPE_SOUTH;
-            case EAST -> VOXEL_SHAPE_EAST;
-            case WEST -> VOXEL_SHAPE_WEST;
-            default -> VOXEL_SHAPE;
-        };
+        return VoxelUtils.rotateShape(getDirection(state), VOXEL_SHAPE);
     }
 
     @Override
