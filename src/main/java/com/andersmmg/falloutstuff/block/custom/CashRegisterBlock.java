@@ -27,15 +27,18 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.stream.Stream;
-
 public class CashRegisterBlock extends BlockWithEntity {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = Properties.OPEN;
+    private static final VoxelShape VOXEL_SHAPE = VoxelShapes.combineAndSimplify(Block.createCuboidShape(3, 0, 3, 13, 2, 13), Block.createCuboidShape(4, 2, 7, 12, 11.5, 11), BooleanBiFunction.OR);
 
     public CashRegisterBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(OPEN, false));
+    }
+
+    protected static Direction getDirection(BlockState state) {
+        return state.get(FACING);
     }
 
     @Override
@@ -109,16 +112,6 @@ public class CashRegisterBlock extends BlockWithEntity {
     public BlockState mirror(BlockState state, BlockMirror mirror) {
         return state.rotate(mirror.getRotation(state.get(FACING)));
     }
-
-    protected static Direction getDirection(BlockState state) {
-        return state.get(FACING);
-    }
-
-    private static final VoxelShape VOXEL_SHAPE = Stream.of(
-            Block.createCuboidShape(1, 0, 3, 15, 3, 14),
-            Block.createCuboidShape(3, 3, 6, 13, 9, 13),
-            Block.createCuboidShape(3, 9, 10, 13, 12, 13)
-    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
     ;
 
     @Override
