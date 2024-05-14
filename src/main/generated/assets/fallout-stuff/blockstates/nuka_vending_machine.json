@@ -4,27 +4,27 @@
       "model": "fallout-stuff:block/nuka_vending_machine",
       "y": 90
     },
+    "facing=east,open=true": {
+      "model": "fallout-stuff:block/nuka_vending_machine_open",
+      "y": 90
+    },
     "facing=north,open=false": {
       "model": "fallout-stuff:block/nuka_vending_machine"
+    },
+    "facing=north,open=true": {
+      "model": "fallout-stuff:block/nuka_vending_machine_open"
     },
     "facing=south,open=false": {
       "model": "fallout-stuff:block/nuka_vending_machine",
       "y": 180
     },
-    "facing=west,open=false": {
-      "model": "fallout-stuff:block/nuka_vending_machine",
-      "y": 270
-    },
-    "facing=east,open=true": {
-      "model": "fallout-stuff:block/nuka_vending_machine_open",
-      "y": 90
-    },
-    "facing=north,open=true": {
-      "model": "fallout-stuff:block/nuka_vending_machine_open"
-    },
     "facing=south,open=true": {
       "model": "fallout-stuff:block/nuka_vending_machine_open",
       "y": 180
+    },
+    "facing=west,open=false": {
+      "model": "fallout-stuff:block/nuka_vending_machine",
+      "y": 270
     },
     "facing=west,open=true": {
       "model": "fallout-stuff:block/nuka_vending_machine_open",
