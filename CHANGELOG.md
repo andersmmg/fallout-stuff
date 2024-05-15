@@ -15,6 +15,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+## [1.7.3] - 2024-05-14
+
+### Fixed
+
+- Display model for new cash register
+
 ## [1.7.2] - 2024-05-14
 
 ### Changed
@@ -130,8 +136,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.2...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.3...HEAD
 
+[1.7.3]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.2...v1.7.3
 [1.7.2]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.1...v1.7.2
 [1.7.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/andersmmg/fallout-stuff/compare/v1.6.1...v1.7.0
