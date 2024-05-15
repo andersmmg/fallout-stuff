@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+## [1.7.4] - 2024-05-15
+
+### Fixed
+
 - Stimpak only healing on client issue #1
 
 ## [1.7.3] - 2024-05-14
@@ -138,8 +142,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.3...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.4...HEAD
 
+[1.7.4]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.3...v1.7.4
 [1.7.3]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.2...v1.7.3
 [1.7.2]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.1...v1.7.2
 [1.7.1]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.0...v1.7.1
