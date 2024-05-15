@@ -15,6 +15,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- Stimpak only healing on client issue #1
+
 ## [1.7.3] - 2024-05-14
 
 ### Fixed

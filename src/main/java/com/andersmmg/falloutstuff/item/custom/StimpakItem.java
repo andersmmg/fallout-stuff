@@ -19,7 +19,10 @@ public class StimpakItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if (!world.isClient) {
+        if (world.isClient) {
+            if (user.getHealth() < user.getMaxHealth()) {
+                world.playSound(user, user.getBlockPos(), ModSounds.STIMPAK_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
+            }
             return TypedActionResult.success(user.getStackInHand(hand));
         }
         ItemStack itemStack = user.getStackInHand(hand);
