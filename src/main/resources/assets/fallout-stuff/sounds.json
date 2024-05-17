@@ -58,5 +58,17 @@
     "sounds": [
       "fallout-stuff:cash_register_close"
     ]
+  },
+  "toolbox_open": {
+    "subtitle": "sounds.fallout-stuff.toolbox_open",
+    "sounds": [
+      "fallout-stuff:toolbox_open"
+    ]
+  },
+  "toolbox_close": {
+    "subtitle": "sounds.fallout-stuff.toolbox_close",
+    "sounds": [
+      "fallout-stuff:toolbox_close"
+    ]
   }
 }

@@ -17,6 +17,8 @@ public class ModSounds {
     public static final SoundEvent NUKA_VENDING_CLOSE = registerSoundEvent("nuka_vending_close");
     public static final SoundEvent CASH_REGISTER_OPEN = registerSoundEvent("cash_register_open");
     public static final SoundEvent CASH_REGISTER_CLOSE = registerSoundEvent("cash_register_close");
+    public static final SoundEvent TOOLBOX_OPEN = registerSoundEvent("toolbox_open");
+    public static final SoundEvent TOOLBOX_CLOSE = registerSoundEvent("toolbox_close");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(FalloutStuff.MOD_ID, name);

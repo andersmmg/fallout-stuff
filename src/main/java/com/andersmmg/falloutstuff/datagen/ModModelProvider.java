@@ -31,6 +31,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.FILE_CABINET_DARK_BLOCK);
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.VAULT_CRATE_BLOCK);
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.NUKA_VENDING_BLOCK);
+        registerOpenableBlock(blockStateModelGenerator, ModBlocks.TOOLBOX);
 
         registerHorizontalRotated(blockStateModelGenerator, ModBlocks.VAULT_SIGN_BLOCK);
         registerHorizontalRotated(blockStateModelGenerator, ModBlocks.VAULT_BOY_STATUE);
