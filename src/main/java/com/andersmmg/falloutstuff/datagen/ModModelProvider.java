@@ -6,7 +6,9 @@ import com.andersmmg.falloutstuff.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -33,7 +35,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.NUKA_VENDING_BLOCK);
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.TOOLBOX);
 
-        registerHorizontalRotated(blockStateModelGenerator, ModBlocks.VAULT_SIGN_BLOCK);
+        registerVaultSign(blockStateModelGenerator, ModBlocks.VAULT_SIGN_BLOCK);
         registerHorizontalRotated(blockStateModelGenerator, ModBlocks.VAULT_BOY_STATUE);
         registerHorizontalRotated(blockStateModelGenerator, ModBlocks.POWER_ARMOR_HELMET_BLOCK);
 
@@ -70,6 +72,20 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier model_base = ModelIds.getBlockModelId(block);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, model_base))
                 .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
+
+    private void registerVaultSign(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier model_top = ModelIds.getBlockSubModelId(block, "_top");
+        Identifier model_bottom = ModelIds.getBlockSubModelId(block, "_bottom");
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
+                .coordinate(createHalfModelMap(Properties.BLOCK_HALF, model_top, model_bottom)));
+    }
+
+    public static BlockStateVariantMap createHalfModelMap(EnumProperty<BlockHalf> property, Identifier topModel, Identifier bottomModel) {
+        return BlockStateVariantMap.create(property)
+                .register(BlockHalf.TOP, BlockStateVariant.create().put(VariantSettings.MODEL, topModel))
+                .register(BlockHalf.BOTTOM, BlockStateVariant.create().put(VariantSettings.MODEL, bottomModel));
     }
 
     private void registerCram(BlockStateModelGenerator blockStateModelGenerator, Block block) {

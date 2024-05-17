@@ -7,12 +7,14 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
@@ -30,10 +32,11 @@ import org.jetbrains.annotations.Nullable;
 
 public class VaultSignBlock extends BlockWithEntity {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final EnumProperty<BlockHalf> HALF = Properties.BLOCK_HALF;
 
     public VaultSignBlock(AbstractBlock.Settings settings) {
         super(settings.luminance(state -> 5));
-        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(HALF, BlockHalf.TOP));
     }
 
     @Override
@@ -96,15 +99,16 @@ public class VaultSignBlock extends BlockWithEntity {
     }
 
     private static final VoxelShape VOXEL_SHAPE = Block.createCuboidShape(1, 11.5, 13.75, 15, 16, 16.5);
+    private static final VoxelShape VOXEL_SHAPE_DOWN = Block.createCuboidShape(1, 0.5, 13.75, 15, 5, 16.5);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return VoxelUtils.rotateShape(getDirection(state), VOXEL_SHAPE);
+        return VoxelUtils.rotateShape(getDirection(state), state.get(HALF) == BlockHalf.TOP ? VOXEL_SHAPE : VOXEL_SHAPE_DOWN);
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, HALF);
     }
 
     @Override
@@ -124,6 +128,17 @@ public class VaultSignBlock extends BlockWithEntity {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        Direction direction = ctx.getSide();
+        BlockPos blockPos = ctx.getBlockPos();
+        BlockHalf blockHalf;
+        if (direction == Direction.DOWN) {
+            blockHalf = BlockHalf.TOP;
+        } else if ((ctx.getHitPos().y - (double) blockPos.getY() > 0.5)) {
+            blockHalf = BlockHalf.TOP;
+        } else {
+            blockHalf = BlockHalf.BOTTOM;
+        }
+//        return direction != Direction.DOWN && (direction == Direction.UP || !(ctx.getHitPos().y - (double)blockPos.getY() > 0.5)) ? blockState2 : (BlockState)blockState2.with(TYPE, SlabType.TOP);
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(HALF, blockHalf);
     }
 }

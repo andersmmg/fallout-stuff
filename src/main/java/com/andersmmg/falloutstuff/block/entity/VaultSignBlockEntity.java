@@ -1,9 +1,11 @@
 package com.andersmmg.falloutstuff.block.entity;
 
 import com.andersmmg.falloutstuff.FalloutStuff;
+import com.andersmmg.falloutstuff.block.custom.VaultSignBlock;
 import com.andersmmg.falloutstuff.record.SignUpdatePacket;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
@@ -45,6 +47,11 @@ public class VaultSignBlockEntity extends BlockEntity {
     // Getter for the text
     public Text getText() {
         return this.text;
+    }
+
+    // Getter for the text
+    public boolean isTop() {
+        return this.getCachedState().get(VaultSignBlock.HALF) == BlockHalf.TOP;
     }
 
     // Method to send update packet to clients

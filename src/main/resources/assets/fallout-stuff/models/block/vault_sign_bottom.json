@@ -1,0 +1,350 @@
+{
+  "texture_size": [
+    32,
+    32
+  ],
+  "textures": {
+    "1": "fallout-stuff:block/vault_sign",
+    "particle": "fallout-stuff:block/vault_sign"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        1.25,
+        15
+      ],
+      "to": [
+        15,
+        5,
+        16.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          0,
+          -10.5,
+          0
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            4,
+            7,
+            5.75
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            1,
+            8,
+            1.5,
+            9.75
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            0,
+            6,
+            7,
+            7.75
+          ],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [
+            1.5,
+            8,
+            2,
+            9.75
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            14,
+            4.5,
+            7,
+            4
+          ],
+          "texture": "#1"
+        },
+        "down": {
+          "uv": [
+            14,
+            4.5,
+            7,
+            5
+          ],
+          "texture": "#1"
+        }
+      }
+    },
+    {
+      "from": [
+        1,
+        4.25,
+        13.75
+      ],
+      "to": [
+        15,
+        5,
+        15
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          0,
+          -10.5,
+          0
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            7,
+            5,
+            14,
+            5.5
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            2,
+            8,
+            2.75,
+            8.5
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            7,
+            5.5,
+            14,
+            6
+          ],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [
+            3,
+            8,
+            3.75,
+            8.5
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            14,
+            0.75,
+            7,
+            0
+          ],
+          "texture": "#1"
+        },
+        "down": {
+          "uv": [
+            14,
+            1,
+            7,
+            1.75
+          ],
+          "texture": "#1"
+        }
+      }
+    },
+    {
+      "from": [
+        1,
+        0.65119,
+        14.26693
+      ],
+      "to": [
+        15,
+        4.65119,
+        15.59193
+      ],
+      "rotation": {
+        "angle": -22.5,
+        "axis": "x",
+        "origin": [
+          8,
+          3.15119,
+          15.01693
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            7,
+            2
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            7,
+            6,
+            7.75,
+            8
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            7,
+            4
+          ],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [
+            0,
+            8,
+            0.75,
+            10
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            14,
+            2.75,
+            7,
+            2
+          ],
+          "texture": "#1"
+        },
+        "down": {
+          "uv": [
+            14,
+            3,
+            7,
+            3.75
+          ],
+          "texture": "#1"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        -4
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        -4
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        80,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        80,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        -4.25,
+        -5.25
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "gui": {
+      "rotation": [
+        -173.25,
+        0,
+        -180
+      ],
+      "translation": [
+        0,
+        -5.75,
+        0
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -4.75,
+        -6.5
+      ]
+    }
+  },
+  "groups": [
+    {
+      "name": "Model",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "children": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

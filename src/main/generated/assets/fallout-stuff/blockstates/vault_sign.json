@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "fallout-stuff:block/vault_sign",
+    "facing=east,half=bottom": {
+      "model": "fallout-stuff:block/vault_sign_bottom",
       "y": 90
     },
-    "facing=north": {
-      "model": "fallout-stuff:block/vault_sign"
+    "facing=east,half=top": {
+      "model": "fallout-stuff:block/vault_sign_top",
+      "y": 90
     },
-    "facing=south": {
-      "model": "fallout-stuff:block/vault_sign",
+    "facing=north,half=bottom": {
+      "model": "fallout-stuff:block/vault_sign_bottom"
+    },
+    "facing=north,half=top": {
+      "model": "fallout-stuff:block/vault_sign_top"
+    },
+    "facing=south,half=bottom": {
+      "model": "fallout-stuff:block/vault_sign_bottom",
       "y": 180
     },
-    "facing=west": {
-      "model": "fallout-stuff:block/vault_sign",
+    "facing=south,half=top": {
+      "model": "fallout-stuff:block/vault_sign_top",
+      "y": 180
+    },
+    "facing=west,half=bottom": {
+      "model": "fallout-stuff:block/vault_sign_bottom",
+      "y": 270
+    },
+    "facing=west,half=top": {
+      "model": "fallout-stuff:block/vault_sign_top",
       "y": 270
     }
   }

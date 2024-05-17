@@ -28,11 +28,15 @@ public class VaultSignBlockEntityRenderer implements BlockEntityRenderer<VaultSi
         if (!shouldRender(entity.getPos())) {
             return;
         }
+        boolean isTop = entity.isTop();
         matrices.push();
         matrices.translate(0.5f, 0.5f, 0.5f);
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(getRotation(entity)));
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-20));
-        matrices.translate(0.0f, 0.18f, 0.48f);
+        matrices.translate(0.0f, 0.18f, 0.49f);
+        if (!isTop) {
+            matrices.translate(0.0f, -0.65f, -0.24f);
+        }
         float textScale = 0.013f;
         matrices.scale(textScale, textScale, textScale);
         matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(180));
