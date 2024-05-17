@@ -9,13 +9,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
-- Allow placing vault signs on top or bottom of block
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+## [1.7.6] - 2024-05-16
+
+### Changed
+
+- Allow placing vault signs on top or bottom of block
 
 ## [1.7.5] - 2024-05-16
 
@@ -154,8 +158,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.5...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.6...HEAD
 
+[1.7.6]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.5...v1.7.6
 [1.7.5]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.4...v1.7.5
 [1.7.4]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.3...v1.7.4
 [1.7.3]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.2...v1.7.3
