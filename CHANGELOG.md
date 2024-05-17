@@ -7,13 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
-- Red toolbox
-
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+## [1.7.5] - 2024-05-16
+
+### Added
+
+- Red toolbox
 
 ### Fixed
 
@@ -146,8 +152,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.4...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.5...HEAD
 
+[1.7.5]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.4...v1.7.5
 [1.7.4]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.3...v1.7.4
 [1.7.3]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.2...v1.7.3
 [1.7.2]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.1...v1.7.2
