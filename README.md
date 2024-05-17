@@ -28,7 +28,7 @@ everything you need for inside and outside the vault.
 - **Cram:** Eat it or stick it on the counter to sit. It doesn't taste great, but it lasts forever!
 - **Posters:** Decorate with Fallout themed posters, like vault posters and Pebbles the cat.
 - **Lights:** Large and small redstone-powered lights for your vaults lighting.
-- **Alarm:** Alert players that something is wrong with an redstone-powered alarm.
+- **Alarm:** Alert players that something is wrong with a redstone-powered alarm.
 - **Vault Signs:** Show vault dwellers and visitors where to go with Vault-Tec style signs.
 - **Nuka-Cola Vending Machine:** Keep your Nuka-Cola cold and fresh in the perfect place.
 - **Cash Register:** Store money for diner customers, or just use it for looks!
@@ -52,8 +52,6 @@ everything you need for inside and outside the vault.
 - **Sliding Doors**
 - **Crafting Recipes**
 - **Power Armor**
-- **Pre-War Money**
-- **Red Toolbox**
 - **Sugar Bombs**
 
 Please note that these features are planned possibilities and not guaranteed. As a solo developer, I'll do my best to
