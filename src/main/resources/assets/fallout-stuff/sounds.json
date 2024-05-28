@@ -70,5 +70,23 @@
     "sounds": [
       "fallout-stuff:toolbox_close"
     ]
+  },
+  "sliding_door_open": {
+    "subtitle": "sounds.fallout-stuff.sliding_door_open",
+    "sounds": [
+      "fallout-stuff:sliding_door_open"
+    ]
+  },
+  "sliding_door_close": {
+    "subtitle": "sounds.fallout-stuff.sliding_door_close",
+    "sounds": [
+      "fallout-stuff:sliding_door_close"
+    ]
+  },
+  "toggle_click": {
+    "subtitle": "sounds.fallout-stuff.toggle_click",
+    "sounds": [
+      "fallout-stuff:toggle_click"
+    ]
   }
 }

@@ -34,6 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.VAULT_CRATE_BLOCK);
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.NUKA_VENDING_BLOCK);
         registerOpenableBlock(blockStateModelGenerator, ModBlocks.TOOLBOX);
+        registerSlidingDoor(blockStateModelGenerator, ModBlocks.SLIDING_DOOR);
+        registerWallButton(blockStateModelGenerator, ModBlocks.TOGGLE_BUTTON);
 
         registerVaultSign(blockStateModelGenerator, ModBlocks.VAULT_SIGN_BLOCK);
         registerHorizontalRotated(blockStateModelGenerator, ModBlocks.VAULT_BOY_STATUE);
@@ -58,6 +60,28 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STIMPAK, Models.GENERATED);
         itemModelGenerator.register(ModItems.NUKA_COLA, Models.GENERATED);
         itemModelGenerator.register(ModItems.NUKA_COLA_BOTTLE, Models.GENERATED);
+    }
+
+    private void registerSlidingDoor(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier model_base = ModelIds.getBlockModelId(block);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, model_base))
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
+
+    private void registerDoor(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier model_base = ModelIds.getBlockModelId(block);
+        Identifier model_open = ModelIds.getBlockSubModelId(block, "_open");
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.OPEN, model_open, model_base)));
+    }
+
+    private void registerWallButton(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier model_base = ModelIds.getBlockModelId(block);
+        Identifier model_powered = ModelIds.getBlockSubModelId(block, "_powered");
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.POWERED, model_powered, model_base)));
     }
 
     private void registerOpenableBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {

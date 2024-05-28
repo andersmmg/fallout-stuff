@@ -19,6 +19,9 @@ public class ModSounds {
     public static final SoundEvent CASH_REGISTER_CLOSE = registerSoundEvent("cash_register_close");
     public static final SoundEvent TOOLBOX_OPEN = registerSoundEvent("toolbox_open");
     public static final SoundEvent TOOLBOX_CLOSE = registerSoundEvent("toolbox_close");
+    public static final SoundEvent SLIDING_DOOR_OPEN = registerSoundEvent("sliding_door_open");
+    public static final SoundEvent SLIDING_DOOR_CLOSE = registerSoundEvent("sliding_door_close");
+    public static final SoundEvent TOGGLE_CLICK = registerSoundEvent("toggle_click");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(FalloutStuff.MOD_ID, name);

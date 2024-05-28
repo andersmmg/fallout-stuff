@@ -2,6 +2,7 @@ package com.andersmmg.falloutstuff.client;
 
 import com.andersmmg.falloutstuff.block.ModBlocks;
 import com.andersmmg.falloutstuff.block.entity.ModBlockEntities;
+import com.andersmmg.falloutstuff.client.renderer.SlidingDoorBlockEntityRenderer;
 import com.andersmmg.falloutstuff.client.renderer.VaultSignBlockEntityRenderer;
 import com.andersmmg.falloutstuff.client.screen.ModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
@@ -17,6 +18,7 @@ public class FalloutStuffClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VAULT_BOY_STATUE, RenderLayer.getCutout());
         BlockEntityRendererFactories.register(ModBlockEntities.VAULT_SIGN_BLOCK_ENTITY, VaultSignBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.SLIDING_DOOR_BLOCK_ENTITY, SlidingDoorBlockEntityRenderer::new);
 		ModScreenHandlers.registerScreenHandlers();
 	}
 }

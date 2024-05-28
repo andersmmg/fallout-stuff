@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "fallout-stuff:block/sliding_door",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "fallout-stuff:block/sliding_door"
+    },
+    "facing=south": {
+      "model": "fallout-stuff:block/sliding_door",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fallout-stuff:block/sliding_door",
+      "y": 270
+    }
+  }
+}

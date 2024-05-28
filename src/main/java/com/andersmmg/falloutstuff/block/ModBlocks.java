@@ -34,6 +34,10 @@ public class ModBlocks {
             new CashRegisterBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block TOOLBOX = registerBlock("red_toolbox",
             new ToolboxBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+    public static final Block SLIDING_DOOR = registerBlock("sliding_door",
+            new SlidingDoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+    public static final Block TOGGLE_BUTTON = registerBlock("toggle_button",
+            new ToggleButtonBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
     public static final Block VAULT_SIGN_BLOCK = registerBlock("vault_sign",
             new VaultSignBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));

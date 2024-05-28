@@ -41,6 +41,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "toolbox_be"),
                     FabricBlockEntityTypeBuilder.create(ToolboxBlockEntity::new,
                             ModBlocks.TOOLBOX).build());
+    public static final BlockEntityType<SlidingDoorBlockEntity> SLIDING_DOOR_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(FalloutStuff.MOD_ID, "sliding_door_be"),
+                    FabricBlockEntityTypeBuilder.create(SlidingDoorBlockEntity::new,
+                            ModBlocks.SLIDING_DOOR).build());
 
     public static void registerBlockEntities() {
         FalloutStuff.LOGGER.info("Registering Block Entities for " + FalloutStuff.MOD_ID);

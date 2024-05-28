@@ -41,6 +41,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.VAULT_SIGN_BLOCK);
         addDrop(ModBlocks.CRAM_BLOCK);
         addDrop(ModBlocks.TOOLBOX);
+        addDrop(ModBlocks.TOGGLE_BUTTON);
+        addDrop(ModBlocks.SLIDING_DOOR, doorDrops(ModBlocks.SLIDING_DOOR));
 
         addDrop(ModBlocks.RED_BUTTON);
         addDrop(ModBlocks.PLAIN_DARK_WOOD_DOOR, doorDrops(ModBlocks.PLAIN_DARK_WOOD_DOOR));
