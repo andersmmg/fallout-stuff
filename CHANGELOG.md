@@ -7,9 +7,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
-- Sliding doors
-- Vault toggle buttons
-
 ### Changed
 
 ### Deprecated
@@ -17,6 +14,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Removed
 
 ### Fixed
+
+## [1.7.7] - 2024-05-28
+
+### Added
+
+- Sliding doors
+- Vault toggle buttons
 
 ## [1.7.6] - 2024-05-16
 
@@ -161,8 +165,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.6...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.7...HEAD
 
+[1.7.7]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.6...v1.7.7
 [1.7.6]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.5...v1.7.6
 [1.7.5]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.4...v1.7.5
 [1.7.4]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.3...v1.7.4
