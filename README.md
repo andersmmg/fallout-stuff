@@ -32,6 +32,8 @@ everything you need for inside and outside the vault.
 - **Vault Signs:** Show vault dwellers and visitors where to go with Vault-Tec style signs.
 - **Nuka-Cola Vending Machine:** Keep your Nuka-Cola cold and fresh in the perfect place.
 - **Cash Register:** Store money for diner customers, or just use it for looks!
+- **Sliding Doors:** Keep your vault dwellers safe with thick metal sliding doors
+- **Toggle Button:** Easily open and close sliding doors with a button press
 
 ### Requirements:
 
@@ -49,7 +51,6 @@ everything you need for inside and outside the vault.
 
 ### Planned Possible Features:
 
-- **Sliding Doors**
 - **Crafting Recipes**
 - **Power Armor**
 - **Sugar Bombs**
