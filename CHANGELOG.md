@@ -15,6 +15,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+## [1.7.8] - 2024-05-28
+
+### Fixed
+
+- Sliding doors crashing server when placed
+
 ## [1.7.7] - 2024-05-28
 
 ### Added
@@ -165,8 +171,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Incorrect class relations in blocks
 
-[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.7...HEAD
+[Unreleased]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.8...HEAD
 
+[1.7.8]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.7...v1.7.8
 [1.7.7]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.6...v1.7.7
 [1.7.6]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.5...v1.7.6
 [1.7.5]: https://github.com/andersmmg/fallout-stuff/compare/v1.7.4...v1.7.5
