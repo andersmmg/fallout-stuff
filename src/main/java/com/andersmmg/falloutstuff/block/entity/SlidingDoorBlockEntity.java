@@ -20,7 +20,9 @@ public class SlidingDoorBlockEntity extends BlockEntity {
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, SlidingDoorBlockEntity blockEntity) {
-        blockEntity.updateAnimation(world, pos, state);
+        if (world.isClient) {
+            blockEntity.updateAnimation(world, pos, state);
+        }
     }
 
     @Environment(EnvType.CLIENT)

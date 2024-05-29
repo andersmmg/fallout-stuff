@@ -121,7 +121,7 @@ public class BoxBlockEntity extends LootableContainerBlockEntity {
     }
 
     void setOpen(BlockState state, boolean open) {
-        this.world.setBlockState(this.getPos(), (BlockState) state.with(BoxBlock.OPEN, open), Block.NOTIFY_ALL);
+        this.world.setBlockState(this.getPos(), state.with(BoxBlock.OPEN, open), Block.NOTIFY_ALL);
     }
 
     @Override
